@@ -22,14 +22,14 @@ export default function HowItHelps() {
               src="/images/how-it-helps/artisan-card.png"
               alt="Zikorra profile for a verified artisan, showing rating and job history"
               rounded="rounded-3xl"
-              className="aspect-[6/5] w-full"
+              className="aspect-[610/455] w-full"
               sizes="(min-width: 768px) 600px, 100vw"
               fit="contain"
             />
-            <h3 className="mt-6 text-lg font-semibold text-[#0b1220]">
+            <h3 className="mt-6 text-xl leading-7 font-semibold tracking-[-0.04em] text-[#071827] sm:text-2xl sm:leading-8 md:text-3xl md:leading-9 lg:leading-[62px]">
               For Verified Artisans
             </h3>
-            <p className="mt-2 text-sm leading-6 text-gray-500">
+            <p className="mt-2 text-base leading-[22px] font-medium text-[#52616F]">
               Receive real service requests, share clear quotations, update
               job progress, and build a trusted work history through every
               completed job.
@@ -41,14 +41,14 @@ export default function HowItHelps() {
               src="/images/how-it-helps/customer-card.png"
               alt="Zikorra chat between a customer and a verified professional coordinating a repair"
               rounded="rounded-3xl"
-              className="aspect-[6/5] w-full"
+              className="aspect-[610/455] w-full"
               sizes="(min-width: 768px) 600px, 100vw"
               fit="contain"
             />
-            <h3 className="mt-6 text-lg font-semibold text-[#0b1220]">
+            <h3 className="mt-6 text-xl leading-7 font-semibold tracking-[-0.04em] text-[#071827] sm:text-2xl sm:leading-8 md:text-3xl md:leading-9 lg:leading-[62px]">
               For Customers &amp; Property Owners
             </h3>
-            <p className="mt-2 text-sm leading-6 text-gray-500">
+            <p className="mt-2 text-base leading-[22px] font-medium text-[#52616F]">
               Request repairs, maintenance, inspections, and property care
               from verified professionals, with clearer pricing, documented
               progress, and better accountability.

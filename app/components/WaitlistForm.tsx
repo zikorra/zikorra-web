@@ -6,8 +6,10 @@ import { ChevronRight } from "lucide-react";
 
 export default function WaitlistForm({
   className = "",
+  formBg = "bg-[#EEF1F4]",
 }: {
   className?: string;
+  formBg?: string;
 }) {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -31,9 +33,11 @@ export default function WaitlistForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className={`mx-auto flex max-w-md items-stretch overflow-hidden rounded-full bg-[#EEF1F4] ${className}`}
+      className={`mx-auto flex max-w-md flex-col items-stretch gap-3 sm:flex-row sm:gap-0 sm:overflow-hidden sm:rounded-full ${className}`}
     >
-      <div className="flex min-w-0 flex-1 items-center gap-2 pl-5">
+      <div
+        className={`flex min-w-0 items-center gap-2 rounded-2xl px-4 py-3.5 sm:flex-1 sm:rounded-none sm:py-4 sm:pl-5 ${formBg}`}
+      >
         <Image
           src="/icons/mail-icon.svg"
           alt=""
@@ -50,12 +54,12 @@ export default function WaitlistForm({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email address"
-          className="w-full min-w-0 flex-1 bg-transparent py-4 text-sm text-[#0b1220] placeholder:font-medium placeholder:text-[#A5A5A5] focus:outline-none sm:text-base"
+          className="w-full min-w-0 flex-1 bg-transparent text-sm text-[#0b1220] placeholder:font-medium placeholder:text-[#A5A5A5] focus:outline-none sm:text-base"
         />
       </div>
       <button
         type="submit"
-        className="flex shrink-0 items-center gap-1.5 bg-[#005EEB] px-6 text-sm font-semibold text-white transition-colors hover:bg-blue-700 sm:text-base"
+        className="flex shrink-0 items-center justify-center gap-1.5 rounded-full bg-[#005EEB] px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700 sm:rounded-none sm:py-4 sm:text-base"
       >
         Join waitlist
         <ChevronRight className="h-4 w-4" aria-hidden />

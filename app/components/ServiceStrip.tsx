@@ -9,7 +9,7 @@ const PHOTOS = [
 
 export default function ServiceStrip() {
   return (
-    <section className="w-full overflow-hidden ">
+    <section className="w-full overflow-hidden">
       <div className="-ml-[100px] flex h-[220px] w-[calc(100%+200px)] gap-4 md:-ml-[160px] md:h-[320px] md:w-[calc(100%+320px)] md:gap-6">
         <PlaceholderImage
           src={`/images/hero/${PHOTOS[0].file}`}

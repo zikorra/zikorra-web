@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { Manrope } from "next/font/google";
 import { ChevronDown, Mail } from "lucide-react";
+
+const manrope = Manrope({ subsets: ["latin"] });
 
 const FAQS = [
   {
@@ -40,27 +43,28 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-white px-6 py-24">
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-12 md:grid-cols-2">
-        <div>
-          <h2 className="text-3xl font-bold tracking-tight text-[#0b1220] sm:text-4xl">
+    <section className="bg-[#F1F5FB] px-6 py-24">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 md:grid-cols-2">
+        <div className="flex h-full flex-col">
+          <h2 className="text-3xl leading-[54px] font-semibold tracking-tight text-[#1F2933] sm:text-4xl md:text-5xl">
             Questions people may have before Zikorra launches.
           </h2>
 
-          <div className="mt-10">
-            <p className="font-semibold text-[#0b1220]">
+          <div className="mt-10 md:mt-auto">
+            <p
+              className={`text-2xl leading-[120%] font-bold text-[#1F2933] ${manrope.className}`}
+            >
               Still have questions?
             </p>
-            <p className="mt-2 max-w-xs text-sm leading-6 text-gray-500">
+            <p className="mt-2 max-w-xs text-base leading-[22px] font-medium text-[#5F6F6B]">
               Reach out to the Zikorra team and we&apos;ll help you understand
               how the platform will work for customers, artisans, property
               owners, and partners.
             </p>
             <a
               href="mailto:zikorra@gmail.com"
-              className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#0b1220] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-black"
+              className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-[#015FEB] px-5 py-4 text-base leading-[22px] font-bold text-white transition-colors hover:bg-black"
             >
-              <Mail className="h-4 w-4" aria-hidden />
               Send email
             </a>
           </div>
@@ -72,7 +76,7 @@ export default function Faq() {
             return (
               <div
                 key={faq.question}
-                className="rounded-xl bg-[#eef2fb] px-5 py-4"
+                className="rounded-xl bg-[#DFE9F7] px-5 py-4"
               >
                 <button
                   type="button"
@@ -80,18 +84,18 @@ export default function Faq() {
                   aria-expanded={isOpen}
                   className="flex w-full items-center justify-between gap-4 text-left"
                 >
-                  <span className="text-sm font-medium text-[#0b1220]">
+                  <span className="text-base leading-[120%] font-medium text-[#081929]">
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`h-4 w-4 shrink-0 text-gray-500 transition-transform ${
+                    className={`h-4 w-4 shrink-0 text-[#081929] transition-transform ${
                       isOpen ? "rotate-180" : ""
                     }`}
                     aria-hidden
                   />
                 </button>
                 {isOpen && (
-                  <p className="mt-3 text-sm leading-6 text-gray-500">
+                  <p className="mt-3 text-base leading-[22px] font-medium text-[#081929]">
                     {faq.answer}
                   </p>
                 )}
