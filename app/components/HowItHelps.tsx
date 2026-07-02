@@ -7,7 +7,7 @@ function ArtisanCard() {
       <div className="rounded-2xl bg-white p-5">
         <div className="flex items-center gap-3">
           <PlaceholderImage
-            src="/images/how-it-helps/avatar-artisan.jpg"
+            src="/images/how-it-helps/avatar-artisan.jpeg"
             alt="Chinedu Okafor, verified AC repair artisan"
             rounded="rounded-full"
             className="h-12 w-12 shrink-0"
@@ -55,7 +55,7 @@ function CustomerCard() {
   return (
     <div className="relative rounded-3xl bg-gradient-to-br from-blue-600 to-blue-800 p-4 sm:p-6">
       <PlaceholderImage
-        src="/images/how-it-helps/property-thumbnail.jpg"
+        src="/images/how-it-helps/property-thumbnail.jpeg"
         alt="Property job site"
         rounded="rounded-xl"
         className="absolute top-4 right-4 h-14 w-14 sm:top-6 sm:right-6"
@@ -68,7 +68,7 @@ function CustomerCard() {
             morning.
           </div>
           <PlaceholderImage
-            src="/images/how-it-helps/avatar-customer.jpg"
+            src="/images/how-it-helps/avatar-customer.jpeg"
             alt="Customer"
             rounded="rounded-full"
             className="h-7 w-7 shrink-0"
@@ -77,7 +77,7 @@ function CustomerCard() {
 
         <div className="mr-auto flex max-w-[80%] items-start gap-2">
           <PlaceholderImage
-            src="/images/how-it-helps/avatar-tunde.jpg"
+            src="/images/how-it-helps/avatar-tunde.jpeg"
             alt="Tunde, verified professional"
             rounded="rounded-full"
             className="h-7 w-7 shrink-0"
