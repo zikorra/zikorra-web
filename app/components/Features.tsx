@@ -23,8 +23,8 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section className="border-b border-gray-100 bg-white px-6 py-20">
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 md:grid-cols-3">
+    <section className="border-b border-[#E5E5E5] bg-white px-6 py-20">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-10 md:grid-cols-3">
         {FEATURES.map(({ icon: Icon, title, description }) => (
           <div key={title}>
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand text-white">

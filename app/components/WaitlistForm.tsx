@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Mail } from "lucide-react";
+import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 
 export default function WaitlistForm({
   className = "",
@@ -30,23 +31,34 @@ export default function WaitlistForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className={`mx-auto flex max-w-md items-center gap-2 rounded-full border border-gray-200 bg-white p-1.5 pl-4 shadow-sm ${className}`}
+      className={`mx-auto flex max-w-md items-stretch overflow-hidden rounded-full bg-[#EEF1F4] ${className}`}
     >
-      <Mail className="h-4 w-4 shrink-0 text-gray-400" aria-hidden />
-      <input
-        type="email"
-        required
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email address"
-        className="w-full min-w-0 flex-1 bg-transparent text-sm text-[#0b1220] placeholder:text-gray-400 focus:outline-none"
-      />
+      <div className="flex min-w-0 flex-1 items-center gap-2 pl-5">
+        <Image
+          src="/icons/mail-icon.svg"
+          alt=""
+          width={20}
+          height={20}
+          className="h-4 w-4 shrink-0 object-contain"
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+          }}
+        />
+        <input
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email address"
+          className="w-full min-w-0 flex-1 bg-transparent py-4 text-sm text-[#0b1220] placeholder:font-medium placeholder:text-[#A5A5A5] focus:outline-none sm:text-base"
+        />
+      </div>
       <button
         type="submit"
-        className="flex shrink-0 items-center gap-1 rounded-full bg-brand px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+        className="flex shrink-0 items-center gap-1.5 bg-[#005EEB] px-6 text-sm font-semibold text-white transition-colors hover:bg-blue-700 sm:text-base"
       >
         Join waitlist
-        <ArrowRight className="h-4 w-4" aria-hidden />
+        <ChevronRight className="h-4 w-4" aria-hidden />
       </button>
     </form>
   );
