@@ -1,10 +1,10 @@
 import PlaceholderImage from "./PlaceholderImage";
 
 const PHOTOS = [
-  { file: "hero-strip-1.jpeg", alt: "Zikorra professional on site" },
-  { file: "hero-strip-2.jpeg", alt: "Zikorra artisan at work" },
-  { file: "hero-strip-3.jpeg", alt: "Zikorra service team" },
-  { file: "hero-strip-4.jpeg", alt: "Zikorra site inspection" },
+  { file: "hero-strip-1.jpg", alt: "Zikorra professional on site" },
+  { file: "hero-strip-2.jpg", alt: "Zikorra artisan at work" },
+  { file: "hero-strip-3.jpg", alt: "Zikorra service team" },
+  { file: "hero-strip-4.jpg", alt: "Zikorra site inspection" },
 ];
 
 export default function ServiceStrip() {
