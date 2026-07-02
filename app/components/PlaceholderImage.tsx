@@ -8,11 +8,15 @@ export default function PlaceholderImage({
   alt,
   className = "",
   rounded = "rounded-xl",
+  sizes = "240px",
+  fit = "cover",
 }: {
   src: string;
   alt: string;
   className?: string;
   rounded?: string;
+  sizes?: string;
+  fit?: "cover" | "contain";
 }) {
   return (
     <div className={`relative overflow-hidden ${rounded} ${className}`}>
@@ -23,8 +27,8 @@ export default function PlaceholderImage({
         src={src}
         alt={alt}
         fill
-        sizes="240px"
-        className="relative object-cover"
+        sizes={sizes}
+        className={`relative ${fit === "cover" ? "object-cover" : "object-contain"}`}
         onError={(e) => {
           e.currentTarget.style.display = "none";
         }}

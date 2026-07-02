@@ -23,17 +23,17 @@ const FEATURES = [
 
 export default function Features() {
   return (
-    <section className="border-b border-[#E5E5E5] bg-white px-6 py-20">
+    <section className="border-b border-[#E5E5E5] bg-white px-6 py-40">
       <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-10 md:grid-cols-3">
         {FEATURES.map(({ icon: Icon, title, description }) => (
           <div key={title}>
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand text-white">
+            <div className="flex h-[52px] w-[52px] items-center justify-center rounded-xl bg-brand text-white">
               <Icon className="h-5 w-5" aria-hidden />
             </div>
-            <h3 className="mt-4 text-lg font-semibold text-[#0b1220]">
+            <h3 className="mt-4 text-xl leading-7 font-semibold tracking-[-0.04em] text-[#071827] sm:text-2xl sm:leading-8 md:text-3xl md:leading-[62px]">
               {title}
             </h3>
-            <p className="mt-2 text-sm leading-6 text-gray-500">
+            <p className="mt-2 text-base leading-[22px] font-medium text-[#52616F]">
               {description}
             </p>
           </div>
