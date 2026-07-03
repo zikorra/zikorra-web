@@ -1,4 +1,4 @@
-import { UserCheck, FileText, ClipboardCheck } from "lucide-react";
+import { UserCheck, FileText, ShieldCheck } from "lucide-react";
 
 const FEATURES = [
   {
@@ -14,10 +14,10 @@ const FEATURES = [
       "Review labour, materials, and service costs before work begins, so everyone understands what is being paid for.",
   },
   {
-    icon: ClipboardCheck,
-    title: "Documented Progress",
+    icon: ShieldCheck,
+    title: "Secure In-App Payments",
     description:
-      "Follow each job with progress updates, photos, videos, and records that keep the work clear from start to finish.",
+      "Make and receive payments safely through Zikorra, with every transaction recorded clearly inside the system.",
   },
 ];
 

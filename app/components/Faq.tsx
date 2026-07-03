@@ -1,41 +1,48 @@
 "use client";
 
 import { useState } from "react";
-import { Manrope } from "next/font/google";
-import { ChevronDown, Mail } from "lucide-react";
-
-const manrope = Manrope({ subsets: ["latin"] });
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 const FAQS = [
   {
-    question: "What is Zikorra?",
-    answer:
-      "Zikorra is a managed home and property service platform that connects you with verified professionals for repairs, maintenance, inspections, and property care across Nigeria.",
-  },
-  {
     question: "Is Zikorra available now?",
     answer:
-      "Zikorra is launching soon. Join the waitlist to get early updates, city availability, and priority access when we go live.",
+      "Zikorra is a technology-powered platform that connects customers with trained, verified, and trusted artisans and skilled professionals across Nigeria. Whether you need an electrician, plumber, AC technician, cleaner, beautician, painter, or other service provider, Zikorra makes hiring safer, easier, and more reliable.",
   },
   {
-    question: "Who is Zikorra for?",
+    question: "What is Zikorra?",
     answer:
-      "Zikorra is for homeowners, tenants, and property managers who need reliable work done, and for verified artisans and service providers looking for real, well-documented jobs.",
+      "Zikorra is Nigeria's managed home and property service platform, connecting you with verified artisans for repairs, maintenance, inspections, and property care — with clear pricing and documented progress from start to finish.",
   },
   {
-    question: "How will I request a service?",
+    question: "How is Zikorra different from hiring artisans directly?",
     answer:
-      "You'll describe the job you need done, and Zikorra will match you with a verified professional nearby who can quote and schedule the work.",
+      "Every artisan on Zikorra is verified before they can take a job, and every request goes through clear quotes, tracked progress, and secure in-app payment — so you're not relying on word of mouth or hoping for the best.",
   },
   {
-    question: "How will Zikorra choose the artisan for my job?",
+    question: "Are your artisans verified?",
     answer:
-      "Artisans are screened and verified before joining the platform, and matched to your job based on their skill, location, and track record.",
+      "Yes. Every artisan is screened and verified before joining the platform, and their track record builds with every completed job.",
   },
   {
-    question: "Will I know the cost before work starts?",
+    question: "What services can I book?",
     answer:
-      "Yes. You'll review a clear quote covering labour, materials, and service costs before any work begins, and payment is only released once you confirm completion.",
+      "Cleaning, electrical work, plumbing, carpentry, painting, AC servicing, tiling, welding, and more — Zikorra covers the everyday home and property needs across Nigeria.",
+  },
+  {
+    question: "How do I book a service?",
+    answer:
+      "Describe the job you need done, and Zikorra matches you with a verified professional nearby who can quote and schedule the work.",
+  },
+  {
+    question: "How do I know the right technician is arriving?",
+    answer:
+      "You'll see your artisan's verified profile, rating, and job history before they arrive, so you always know who's coming and what they specialize in.",
+  },
+  {
+    question: "Is my payment safe?",
+    answer:
+      "Yes. Payments are made securely through Zikorra and only released to the artisan once you confirm the job is complete.",
   },
 ];
 
@@ -43,40 +50,19 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-[#F1F5FB] px-6 py-24">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 md:grid-cols-2">
-        <div className="flex h-full flex-col">
-          <h2 className="text-3xl leading-[54px] font-semibold tracking-tight text-[#1F2933] sm:text-4xl md:text-5xl">
-            Questions people may have before Zikorra launches.
-          </h2>
+    <section id="faq" className="bg-[#F1F5FB] px-6 py-24">
+      <div className="mx-auto max-w-[720px] text-center">
+        <h2 className="text-3xl leading-[44px] font-semibold tracking-[-0.04em] text-[#071827] sm:text-4xl">
+          Have questions? Find answers
+        </h2>
 
-          <div className="mt-10 md:mt-auto">
-            <p
-              className={`text-2xl leading-[120%] font-bold text-[#1F2933] ${manrope.className}`}
-            >
-              Still have questions?
-            </p>
-            <p className="mt-2 max-w-xs text-base leading-[22px] font-medium text-[#5F6F6B]">
-              Reach out to the Zikorra team and we&apos;ll help you understand
-              how the platform will work for customers, artisans, property
-              owners, and partners.
-            </p>
-            <a
-              href="mailto:zikorra@gmail.com"
-              className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-[#015FEB] px-5 py-4 text-base leading-[22px] font-bold text-white transition-colors hover:bg-black"
-            >
-              Send email
-            </a>
-          </div>
-        </div>
-
-        <div className="space-y-3">
+        <div className="mt-10 space-y-3 text-left">
           {FAQS.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div
                 key={faq.question}
-                className="rounded-xl bg-[#DFE9F7] px-5 py-4"
+                className="rounded-xl bg-white px-5 py-4 shadow-sm"
               >
                 <button
                   type="button"
@@ -87,15 +73,16 @@ export default function Faq() {
                   <span className="text-base leading-[120%] font-medium text-[#081929]">
                     {faq.question}
                   </span>
-                  <ChevronDown
-                    className={`h-4 w-4 shrink-0 text-[#081929] transition-transform ${
+                  <span
+                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-brand transition-transform ${
                       isOpen ? "rotate-180" : ""
                     }`}
-                    aria-hidden
-                  />
+                  >
+                    <ChevronDown className="h-4 w-4" aria-hidden />
+                  </span>
                 </button>
                 {isOpen && (
-                  <p className="mt-3 text-base leading-[22px] font-medium text-[#081929]">
+                  <p className="mt-3 text-base leading-[22px] font-medium text-[#5F6F6B]">
                     {faq.answer}
                   </p>
                 )}
@@ -103,6 +90,14 @@ export default function Faq() {
             );
           })}
         </div>
+
+        <button
+          type="button"
+          className="mt-8 inline-flex items-center gap-1.5 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[#071827] shadow-sm transition-colors hover:bg-blue-50"
+        >
+          More questions
+          <ChevronRight className="h-4 w-4" aria-hidden />
+        </button>
       </div>
     </section>
   );

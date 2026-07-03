@@ -6,13 +6,12 @@ const manrope = Manrope({ subsets: ["latin"] });
 export default function CtaSection() {
   return (
     <section className="bg-white px-6 py-20">
-      <div className="relative mx-auto max-w-[1339px] overflow-hidden rounded-3xl bg-[#F1F5FB] px-6 pt-16 pb-52 text-center sm:px-12 sm:pb-52">
-        <h2 className="text-2xl leading-[44px] font-semibold tracking-[-0.04em] text-[#071827] sm:text-3xl md:text-[40px]">
+      <div className="relative mx-auto max-w-[1339px] overflow-hidden rounded-3xl bg-[#005EEB] px-6 pt-16 pb-52 text-center sm:px-12 sm:pb-52">
+        <h2 className="text-2xl leading-[44px] font-semibold tracking-[-0.04em] text-white max-w-[408px] mx-auto sm:text-3xl md:text-[40px]">
           Be among the first to use Zikorra.
         </h2>
-        <p className="mx-auto mt-3 max-w-[590px] text-base leading-[22px] font-medium text-[#52616F]">
-          Join the waitlist for launch updates, early access, and
-          availability in your city.
+        <p className="mx-auto mt-3 max-w-[590px] text-base leading-[22px] font-medium text-white max-w-[372px]">
+         Join the waitlist for launch updates, early access, and availability in your city.
         </p>
 
         <WaitlistForm className="mt-8" formBg="bg-[#F8FAFC]" />
