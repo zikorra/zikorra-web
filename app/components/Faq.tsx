@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
 const FAQS = [
@@ -91,13 +92,13 @@ export default function Faq() {
           })}
         </div>
 
-        <button
-          type="button"
+        <Link
+          href="/faq"
           className="mt-8 inline-flex items-center gap-1.5 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[#071827] shadow-sm transition-colors hover:bg-blue-50"
         >
           More questions
           <ChevronRight className="h-4 w-4" aria-hidden />
-        </button>
+        </Link>
       </div>
     </section>
   );
