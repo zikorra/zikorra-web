@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const NAV_LINKS = [
   { label: "Home", href: "/", sectionId: null },
-  { label: "FAQs", href: "/#faq", sectionId: "faq" },
   { label: "What We Do", href: "/#what-we-do", sectionId: "what-we-do" },
+  { label: "FAQs", href: "/#faq", sectionId: "faq" },
 ];
 
 export default function Header() {
@@ -16,14 +16,19 @@ export default function Header() {
     const sectionIds = NAV_LINKS.map((link) => link.sectionId).filter(
       (id): id is string => Boolean(id),
     );
+    const intersecting = new Set<string>();
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+            intersecting.add(entry.target.id);
+          } else {
+            intersecting.delete(entry.target.id);
           }
         });
+        const current = sectionIds.find((id) => intersecting.has(id));
+        setActiveSection(current ?? null);
       },
       { rootMargin: "-40% 0px -50% 0px" },
     );
