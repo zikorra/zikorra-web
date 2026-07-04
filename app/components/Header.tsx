@@ -38,7 +38,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full bg-white px-6 py-5">
+      <header className="sticky top-0 z-50 w-full bg-white px-6 py-5">
         <div className="mx-auto flex max-w-[1240px] items-center justify-between">
           <div className="h-9 w-9 rounded-full bg-blue-100" aria-hidden />
           <nav className="hidden items-center gap-8 sm:flex">
