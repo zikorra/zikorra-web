@@ -6,13 +6,13 @@ const manrope = Manrope({ subsets: ["latin"] });
 export default function CtaSection() {
   return (
     <section className="bg-white px-6 py-20">
-      <div className="relative z-0 mx-auto max-w-[1339px] overflow-hidden rounded-3xl bg-[#005EEB] px-6 pt-16 pb-52 text-center sm:px-12 sm:pb-52">
+      <div className="relative z-0 mx-auto max-w-[1339px] overflow-hidden rounded-3xl bg-[#005EEB] px-6 pt-16 pb-52 text-center sm:px-12 sm:pb-40">
         <div
           aria-hidden
           className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-[721px] w-[631px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black blur-[894.2px]"
         />
 
-        <h2 className="text-2xl leading-[44px] font-semibold tracking-[-0.04em] text-white max-w-[408px] mx-auto sm:text-3xl md:text-[40px]">
+        <h2 className="text-2xl leading-8 font-semibold tracking-[-0.04em] text-white max-w-[408px] mx-auto sm:text-3xl sm:leading-9 md:text-[40px] md:leading-[44px]">
           Be among the first to use Zikorra.
         </h2>
         <p className="mx-auto mt-3 max-w-[590px] text-base leading-[22px] font-medium text-white max-w-[372px]">

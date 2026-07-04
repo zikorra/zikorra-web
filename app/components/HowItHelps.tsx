@@ -7,7 +7,7 @@ export default function HowItHelps() {
         <span className="text-base leading-[22px] font-medium tracking-widest text-[#52616F]">
           HOW ZIKORRA HELPS
         </span>
-        <h2 className="mx-auto mt-3 text-2xl leading-[44px] font-semibold tracking-[-0.04em] text-[#071827] sm:text-3xl md:text-[40px]">
+        <h2 className="mx-auto mt-3 text-2xl leading-8 font-semibold tracking-[-0.04em] text-[#071827] sm:text-3xl sm:leading-9 md:text-[40px] md:leading-[44px]">
           One platform for the people who need work done and the
           professionals who do it.
         </h2>
@@ -26,7 +26,7 @@ export default function HowItHelps() {
               sizes="(min-width: 768px) 600px, 100vw"
               fit="contain"
             />
-            <h3 className="mt-6 text-xl leading-7 font-semibold tracking-[-0.04em] text-[#071827] sm:text-2xl sm:leading-8 md:text-3xl md:leading-9 lg:leading-[62px]">
+            <h3 className="mt-6 text-xl leading-7 font-semibold tracking-[-0.04em] text-[#071827] sm:text-2xl sm:leading-8 xl:text-3xl xl:leading-[62px]">
               For Verified Artisans
             </h3>
             <p className="mt-2 text-base leading-[22px] font-medium text-[#52616F]">
@@ -45,7 +45,7 @@ export default function HowItHelps() {
               sizes="(min-width: 768px) 600px, 100vw"
               fit="contain"
             />
-            <h3 className="mt-6 text-xl leading-7 font-semibold tracking-[-0.04em] text-[#071827] sm:text-2xl sm:leading-8 md:text-3xl md:leading-9 lg:leading-[62px]">
+            <h3 className="mt-6 text-xl leading-7 font-semibold tracking-[-0.04em] text-[#071827] sm:text-2xl sm:leading-8 xl:text-3xl xl:leading-[62px]">
               For Customers &amp; Property Owners
             </h3>
             <p className="mt-2 text-base leading-[22px] font-medium text-[#52616F]">

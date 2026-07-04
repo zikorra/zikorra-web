@@ -33,7 +33,7 @@ export default function Features() {
             <div className="flex h-[52px] w-[52px] items-center justify-center rounded-xl bg-brand text-white">
               <Icon className="h-5 w-5" aria-hidden />
             </div>
-            <h3 className="mt-4 text-xl leading-7 font-semibold tracking-[-0.04em] text-[#071827] sm:text-2xl sm:leading-8 md:text-3xl md:leading-9 lg:leading-[62px]">
+            <h3 className="mt-4 text-xl leading-7 font-semibold tracking-[-0.04em] text-[#071827] sm:text-2xl sm:leading-8 xl:text-3xl xl:leading-[62px]">
               {title}
             </h3>
             <p className="mt-2 text-base leading-[22px] font-medium text-[#52616F]">

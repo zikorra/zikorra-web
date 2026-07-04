@@ -21,7 +21,7 @@ export default function HeroSlideshow() {
   }, []);
 
   return (
-    <div className="absolute inset-0 -z-20 bg-[#]">
+    <div className="absolute inset-0 -z-20">
       {SLIDES.map((src, index) => (
         <Image
           key={src}

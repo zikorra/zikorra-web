@@ -79,7 +79,7 @@ export default function Faq() {
   return (
     <section id="faq" className="bg-[#F1F5FB] px-6 py-24">
       <div className="mx-auto max-w-[820px] text-center">
-        <h2 className="text-3xl leading-[44px] font-semibold tracking-[-0.04em] text-[#071827] sm:text-4xl">
+        <h2 className="text-3xl leading-9 font-semibold tracking-[-0.04em] text-[#071827] sm:text-4xl sm:leading-[44px]">
           Have questions? Find answers
         </h2>
 
