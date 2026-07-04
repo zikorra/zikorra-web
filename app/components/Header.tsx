@@ -1,28 +1,63 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "FAQs", href: "/faq" },
-  { label: "Testimonials", href: "/#how-it-helps" },
-  { label: "Contact", href: "/#cta" },
+  { label: "Home", href: "/", sectionId: null },
+  { label: "FAQs", href: "/#faq", sectionId: "faq" },
+  { label: "What We Do", href: "/#what-we-do", sectionId: "what-we-do" },
 ];
 
 export default function Header() {
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+
+  useEffect(() => {
+    const sectionIds = NAV_LINKS.map((link) => link.sectionId).filter(
+      (id): id is string => Boolean(id),
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -50% 0px" },
+    );
+
+    const elements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <header className="w-full bg-white px-6 py-5">
         <div className="mx-auto flex max-w-[1240px] items-center justify-between">
           <div className="h-9 w-9 rounded-full bg-blue-100" aria-hidden />
-          <nav className="hidden items-center gap-8 text-sm font-medium text-[#0b1220] sm:flex">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="transition-colors hover:text-brand"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="hidden items-center gap-8 sm:flex">
+            {NAV_LINKS.map((link) => {
+              const isActive = link.sectionId
+                ? activeSection === link.sectionId
+                : activeSection === null;
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`text-[15px] leading-[22px] font-medium transition-colors hover:text-black ${
+                    isActive ? "text-black" : "text-[#475569]"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
         </div>
       </header>
