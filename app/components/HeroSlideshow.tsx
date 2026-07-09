@@ -28,7 +28,7 @@ export default function HeroSlideshow() {
           src={src}
           alt=""
           fill
-          priority={index === 0}
+          priority
           sizes="100vw"
           className={`object-cover transition-opacity duration-1000 ease-in-out ${
             index === activeIndex ? "opacity-100" : "opacity-0"
