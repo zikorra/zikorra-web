@@ -1,6 +1,7 @@
 import Image from "next/image";
 import WaitlistForm from "./WaitlistForm";
 import HeroSlideshow from "./HeroSlideshow";
+import HeroNav from "./HeroNav";
 
 const CATEGORIES = [
   { icon: "plumber", label: "Plumbing" },
@@ -11,11 +12,13 @@ const CATEGORIES = [
 
 export default function Hero() {
   return (
-    <section className="px-6 pt-6 pb-16">
-      <div className="relative mx-auto flex min-h-[560px] max-w-[1240px] flex-col justify-around overflow-hidden rounded-[32px] p-6 sm:min-h-[728px] sm:p-10 md:p-20">
-        <HeroSlideshow />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
+    <section className="relative flex h-svh flex-col justify-between overflow-hidden p-6 sm:p-10 md:p-20">
+      <HeroSlideshow />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
 
+      <HeroNav />
+
+      <div className="mx-auto flex w-full max-w-[1240px] flex-1 flex-col justify-around">
         <div className="relative max-w-xl">
           <div
             aria-hidden

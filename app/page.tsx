@@ -1,4 +1,3 @@
-import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ServiceCategories from "./components/ServiceCategories";
 import Features from "./components/Features";
@@ -10,7 +9,6 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
-      <Header />
       <Hero />
       <ServiceCategories />
       <Features />
