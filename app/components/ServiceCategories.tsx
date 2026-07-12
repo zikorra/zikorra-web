@@ -19,16 +19,16 @@ export default function ServiceCategories() {
           {[...CATEGORIES, ...CATEGORIES].map(({ icon, label }, index) => (
             <div
               key={`${label}-${index}`}
-              className="flex h-[100px] w-[150px] shrink-0 flex-col items-start justify-between rounded-2xl border border-[#EEF1F4] bg-white p-4 sm:h-[134px] sm:w-[223px]"
+              className="flex h-[100px] w-[150px] shrink-0 flex-col items-start justify-between overflow-hidden rounded-2xl border border-[#EEF1F4] bg-white p-3 sm:h-[134px] sm:w-[223px] sm:p-4"
             >
               <Image
                 src={`/icons/categories/${icon}.svg`}
                 alt=""
                 width={30}
                 height={30}
-                className=""
+                className="h-6 w-6 sm:h-[30px] sm:w-[30px]"
               />
-              <span className="text-[22px] leading-6 font-semibold tracking-[-0.04em] text-[#071827]">
+              <span className="text-base leading-5 font-semibold tracking-[-0.04em] text-[#071827] sm:text-[22px] sm:leading-6">
                 {label}
               </span>
             </div>
