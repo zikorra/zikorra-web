@@ -30,7 +30,8 @@ export default function CtaSection() {
               Contact us
             </p>
             <p className="text-base leading-[22px] font-medium text-[#5F6F6B]">
-              +1 (404) 771-4182
+              +1 (404) 771-4182{" "}
+              <span className="text-[#8A97A0]">(WhatsApp)</span>
             </p>
           </div>
           <div>
