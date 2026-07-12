@@ -39,7 +39,7 @@ export default function HowItWorks() {
                 sizes="(min-width: 640px) 33vw, 100vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-100 transition-opacity duration-300 sm:opacity-0 sm:group-hover:opacity-100">
                 <span className="px-6 text-center text-lg font-semibold text-white sm:text-xl">
                   {title}
                 </span>
