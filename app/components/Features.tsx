@@ -34,7 +34,7 @@ export default function Features() {
         {FEATURES.map(({ icon, title, description }) => (
           <div
             key={title}
-            className="relative min-h-[220px] overflow-hidden rounded-[28px] bg-[#F7F9FC] p-6 sm:min-h-[236px] sm:p-8"
+            className="relative min-h-[220px] overflow-hidden rounded-[28px] bg-[#FBFBFB] p-6 sm:min-h-[236px] sm:p-8"
           >
             <div className="max-w-[240px] pr-16 sm:pr-20">
               <h3 className="text-lg font-semibold tracking-[-0.02em] text-[#071827] sm:text-xl">
