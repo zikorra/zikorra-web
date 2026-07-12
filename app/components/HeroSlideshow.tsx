@@ -2,12 +2,22 @@
 
 import { useEffect, useState } from "react";
 
-const SLIDES = ["/videos/hero/hero-bg-1.mp4", "/videos/hero/hero-bg-2.mp4"];
+const SLIDES = [
+  {
+    src: "/videos/hero/hero-bg-1-web.mp4",
+    poster: "/images/hero/hero-bg-1-poster.jpg",
+  },
+  {
+    src: "/videos/hero/hero-bg-2-web.mp4",
+    poster: "/images/hero/hero-bg-2-poster.jpg",
+  },
+];
 
 const SLIDE_DURATION = 8000;
 
 export default function HeroSlideshow() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [nextSlideReady, setNextSlideReady] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,15 +28,19 @@ export default function HeroSlideshow() {
 
   return (
     <div className="absolute inset-0 -z-20 bg-black">
-      {SLIDES.map((src, index) => (
+      {SLIDES.map(({ src, poster }, index) => (
         <video
           key={src}
-          src={src}
+          src={index === activeIndex || nextSlideReady ? src : undefined}
+          poster={poster}
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
+          preload={index === activeIndex ? "auto" : "none"}
+          onCanPlay={() => {
+            if (index === activeIndex) setNextSlideReady(true);
+          }}
           className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
             index === activeIndex ? "opacity-100" : "opacity-0"
           }`}

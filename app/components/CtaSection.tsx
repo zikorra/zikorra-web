@@ -30,7 +30,7 @@ export default function CtaSection() {
               Contact us
             </p>
             <p className="text-base leading-[22px] font-medium text-[#5F6F6B]">
-              +234 237 3829
+              +1 (404) 771-4182
             </p>
           </div>
           <div>
@@ -40,7 +40,7 @@ export default function CtaSection() {
               Send an email
             </p>
             <p className="text-base leading-[22px] font-medium text-[#5F6F6B]">
-              zikorra@gmail.com
+              support@zikorra.com
             </p>
           </div>
         </div>
