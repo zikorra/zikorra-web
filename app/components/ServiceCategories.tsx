@@ -13,26 +13,22 @@ const CATEGORIES = [
 
 export default function ServiceCategories() {
   return (
-    <section className="bg-[#F7F9FC] px-6 py-16 sm:py-20">
-      <div className="mx-auto max-w-[1240px]">
-        <h2 className="text-2xl leading-8 font-semibold tracking-[-0.04em] text-black sm:text-[32px] sm:leading-9 xl:leading-[62px]">
-          Find trusted artisans for every home and property need
-        </h2>
-
-        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {CATEGORIES.map(({ icon, label }) => (
+    <section className="bg-[#F7F9FC] py-16 sm:py-20">
+      <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+        <div className="animate-marquee flex w-max gap-3 px-6">
+          {[...CATEGORIES, ...CATEGORIES].map(({ icon, label }, index) => (
             <div
-              key={label}
-              className="flex flex-col items-start gap-3 rounded-2xl bg-white p-5 shadow-sm"
+              key={`${label}-${index}`}
+              className="flex h-[100px] w-[150px] shrink-0 flex-col items-start justify-between rounded-2xl border border-[#EEF1F4] bg-white p-4 sm:h-[134px] sm:w-[223px]"
             >
               <Image
                 src={`/icons/categories/${icon}.svg`}
                 alt=""
-                width={28}
-                height={28}
-                className="h-7 w-7"
+                width={30}
+                height={30}
+                className=""
               />
-              <span className="text-[22px] leading-6 font-semibold tracking-[-0.04em] text-[#071827] sm:leading-7 xl:leading-[62px]">
+              <span className="text-[22px] leading-6 font-semibold tracking-[-0.04em] text-[#071827]">
                 {label}
               </span>
             </div>
