@@ -2,6 +2,7 @@ import Hero from "./components/Hero";
 import ServiceCategories from "./components/ServiceCategories";
 import HowItWorks from "./components/HowItWorks";
 import Features from "./components/Features";
+import AvailableProfessionals from "./components/AvailableProfessionals";
 import HowItHelps from "./components/HowItHelps";
 import Faq from "./components/Faq";
 import CtaSection from "./components/CtaSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <ServiceCategories />
       <HowItWorks />
       <Features />
+      <AvailableProfessionals />
       <HowItHelps />
       <Faq />
       <CtaSection />
