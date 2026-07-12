@@ -4,14 +4,17 @@ const STEPS = [
   {
     image: "/images/how-it-works/step-1.jpg",
     alt: "Customer requesting a service from their phone",
+    title: "Tell us what you need",
   },
   {
     image: "/images/how-it-works/step-2.jpg",
     alt: "Verified professional carrying out the service",
+    title: "Get trusted artisans",
   },
   {
     image: "/images/how-it-works/step-3.jpg",
     alt: "Secure payment on completion",
+    title: "Track and pay safely",
   },
 ];
 
@@ -24,10 +27,10 @@ export default function HowItWorks() {
         </h2>
 
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5">
-          {STEPS.map(({ image, alt }) => (
+          {STEPS.map(({ image, alt, title }) => (
             <div
               key={image}
-              className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#F1F1F1]"
+              className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#F1F1F1]"
             >
               <Image
                 src={image}
@@ -36,6 +39,11 @@ export default function HowItWorks() {
                 sizes="(min-width: 640px) 33vw, 100vw"
                 className="object-cover"
               />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <span className="px-6 text-center text-lg font-semibold text-white sm:text-xl">
+                  {title}
+                </span>
+              </div>
             </div>
           ))}
         </div>

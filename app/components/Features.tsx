@@ -1,44 +1,56 @@
-import { UserCheck, FileText, ShieldCheck } from "lucide-react";
+import Image from "next/image";
 
 const FEATURES = [
   {
-    icon: UserCheck,
-    title: "Verified Professionals",
+    icon: "/images/features/electrician.png",
+    title: "Electrician",
     description:
-      "Connect with screened artisans and service providers for repairs, maintenance, inspections, and property care.",
+      "Book trusted artisans for plumbing, electrical work, carpentry, painting, and more.",
   },
   {
-    icon: FileText,
-    title: "Clear Service Quotes",
+    icon: "/images/features/beauty-at-home.png",
+    title: "Beauty at Home",
     description:
-      "Review labour, materials, and service costs before work begins, so everyone understands what is being paid for.",
+      "Request a hairstylist, barber, nail technician, or makeup artist to come to your location.",
   },
   {
-    icon: ShieldCheck,
-    title: "Secure In-App Payments",
+    icon: "/images/features/cleaning.png",
+    title: "Cleaning",
     description:
-      "Make and receive payments safely through Zikorra, with every transaction recorded clearly inside the system.",
+      "Get help with home cleaning, deep cleaning, and routine upkeep from trusted service professionals.",
+  },
+  {
+    icon: "/images/features/property-care.png",
+    title: "Property Care",
+    description:
+      "Request inspections, maintenance support, and trusted help for keeping your property in good condition.",
   },
 ];
 
 export default function Features() {
   return (
-    <section
-      id="what-we-do"
-      className="border-b border-[#E5E5E5] bg-white px-6 py-16 sm:py-24 md:py-40"
-    >
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-10 md:grid-cols-3">
-        {FEATURES.map(({ icon: Icon, title, description }) => (
-          <div key={title}>
-            <div className="flex h-[52px] w-[52px] items-center justify-center rounded-xl bg-brand text-white">
-              <Icon className="h-5 w-5" aria-hidden />
+    <section id="what-we-do" className="bg-white px-6 py-16 sm:py-20">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {FEATURES.map(({ icon, title, description }) => (
+          <div
+            key={title}
+            className="relative min-h-[220px] overflow-hidden rounded-[28px] bg-[#F7F9FC] p-6 sm:min-h-[236px] sm:p-8"
+          >
+            <div className="max-w-[240px] pr-16 sm:pr-20">
+              <h3 className="text-lg font-semibold tracking-[-0.02em] text-[#071827] sm:text-xl">
+                {title}
+              </h3>
+              <p className="mt-2 text-sm leading-[22px] font-medium text-[#52616F]">
+                {description}
+              </p>
             </div>
-            <h3 className="mt-4 text-xl leading-7 font-semibold tracking-[-0.04em] text-[#071827] sm:text-2xl sm:leading-8 xl:text-3xl xl:leading-[62px]">
-              {title}
-            </h3>
-            <p className="mt-2 text-base leading-[22px] font-medium text-[#52616F]">
-              {description}
-            </p>
+            <Image
+              src={icon}
+              alt=""
+              width={96}
+              height={96}
+              className="absolute top-1/2 right-5 h-20 w-20 -translate-y-1/2 object-contain sm:right-8 sm:h-24 sm:w-24"
+            />
           </div>
         ))}
       </div>
