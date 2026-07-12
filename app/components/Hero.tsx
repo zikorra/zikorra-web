@@ -12,7 +12,7 @@ const CATEGORIES = [
 
 export default function Hero() {
   return (
-    <section className="relative flex h-svh flex-col justify-between overflow-hidden p-6 sm:p-10 md:p-20">
+    <section className="relative flex min-h-svh flex-col justify-between overflow-hidden px-6 pt-5 pb-6 sm:px-10 sm:pt-6 sm:pb-10 md:px-20 md:pt-8 md:pb-20">
       <HeroSlideshow />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
 
