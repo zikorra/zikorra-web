@@ -37,7 +37,7 @@ export default function AvailableProfessionals() {
             ({ image, icon: Icon, title, description }, index) => (
               <div
                 key={`${title}-${index}`}
-                className="relative aspect-[4/5] w-[80%] shrink-0 overflow-hidden rounded-2xl sm:w-[min(calc(25%+2rem),320px)]"
+                className="relative aspect-[4/5] w-[80%] shrink-0 overflow-hidden rounded-2xl sm:w-[calc(25%+2rem)]"
               >
                 <Image
                   src={image}
