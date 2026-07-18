@@ -36,7 +36,7 @@ export default function Hero() {
           </div>
 
           <h1 className="mt-3 max-w-[583px] text-[26px] leading-[32px] font-semibold tracking-[-0.04em] text-[#DDDDDD] sm:mt-4 sm:text-4xl sm:leading-[46px] md:text-5xl md:leading-[62px]">
-            Trusted home and property services, handled with accountability.
+            Trusted home and property services, handled with care and accountability.
           </h1>
 
           <p className="mt-2 text-sm leading-5 font-medium text-white sm:mt-3 sm:text-base sm:leading-6">

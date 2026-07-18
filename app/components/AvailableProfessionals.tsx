@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Sparkles, Zap, Scissors } from "lucide-react";
+import { Sparkles, Zap, Scissors, Wrench } from "lucide-react";
 
 const PROFESSIONALS = [
   {
@@ -15,10 +15,10 @@ const PROFESSIONALS = [
     description: "Wiring, lighting, socket repairs, inspections & more",
   },
   {
-    image: "/images/professionals/electrician-2.jpg",
-    icon: Zap,
-    title: "Electrician",
-    description: "Wiring, lighting, socket repairs, inspections & more",
+    image: "/images/professionals/plumber.jpg",
+    icon: Wrench,
+    title: "Plumber",
+    description: "Home painting, wall finishing, touch-ups & colour transformation services",
   },
   {
     image: "/images/professionals/hairdresser.jpg",
