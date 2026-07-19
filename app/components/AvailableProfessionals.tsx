@@ -15,7 +15,7 @@ const PROFESSIONALS = [
     description: "Wiring, lighting, socket repairs, inspections & more",
   },
   {
-    image: "/images/professionals/plumber.jpg",
+    image: "/images/professionals/plumber.png",
     icon: Wrench,
     title: "Plumber",
     description:
