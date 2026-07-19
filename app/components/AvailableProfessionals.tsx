@@ -18,7 +18,8 @@ const PROFESSIONALS = [
     image: "/images/professionals/plumber.jpg",
     icon: Wrench,
     title: "Plumber",
-    description: "Home painting, wall finishing, touch-ups & colour transformation services",
+    description:
+      "Leak repairs, pipe installations, drain cleaning, inspections & more.",
   },
   {
     image: "/images/professionals/hairdresser.jpg",
