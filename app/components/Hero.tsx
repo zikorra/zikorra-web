@@ -44,7 +44,7 @@ export default function Hero() {
             maintenance, inspections, and property care across Nigeria.
           </p>
 
-          <WaitlistForm className="mt-4 !mx-0 sm:mt-6" />
+          <WaitlistForm className="mt-4 sm:mt-6" />
 
           <p className="my-4 max-w-[437px] text-sm font-medium text-white sm:my-10">
             Launching soon. Join early for updates, city availability, and

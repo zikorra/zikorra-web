@@ -9,9 +9,11 @@ const PHONE_PATTERN = /^\+?[0-9()\-\s]{7,}$/;
 export default function WaitlistForm({
   className = "",
   formBg = "bg-[#EEF1F4]",
+  centered = false,
 }: {
   className?: string;
   formBg?: string;
+  centered?: boolean;
 }) {
   const [contact, setContact] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -62,7 +64,7 @@ export default function WaitlistForm({
     <div className={className}>
       <form
         onSubmit={handleSubmit}
-        className=" flex max-w-md flex-col items-stretch gap-3 sm:flex-row sm:gap-0 sm:overflow-hidden sm:rounded-full"
+        className={`flex max-w-md flex-col items-stretch gap-3 sm:flex-row sm:gap-0 sm:overflow-hidden sm:rounded-full ${centered ? "mx-auto" : ""}`}
       >
         <div
           className={`flex min-w-0 items-center gap-2 rounded-2xl px-4 py-3.5 sm:flex-1 sm:rounded-none sm:py-4 sm:pl-5 ${formBg}`}

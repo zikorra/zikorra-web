@@ -20,7 +20,7 @@ export default function CtaSection() {
           availability in your city.
         </p>
 
-        <WaitlistForm className="mt-8" formBg="bg-[#F8FAFC]" />
+        <WaitlistForm className="mt-8" formBg="bg-[#F8FAFC]" centered />
 
         <div className="absolute right-0 bottom-0 flex flex-col items-start gap-8 rounded-tl-3xl bg-white px-8 py-8 text-left sm:flex-row sm:gap-16">
           <div>
