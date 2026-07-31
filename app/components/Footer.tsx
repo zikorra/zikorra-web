@@ -1,12 +1,16 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="overflow-hidden bg-white">
-    
-      <div
-        aria-hidden
-        className="-mb-[6vw] select-none bg-gradient-to-r from-[#081828] to-[#015FEB] bg-clip-text text-center text-[80px] leading-[120%] font-bold tracking-tight text-transparent sm:text-[140px] md:text-[220px] lg:text-[303.3px]"
-      >
-        ZIKORRA
+      <div className="relative mx-auto aspect-[1440/287] w-full max-w-[1440px]">
+        <Image
+          src="/icons/zikorra-wordmark@3x.png"
+          alt="Zikorra"
+          fill
+          sizes="(min-width: 1440px) 1440px, 100vw"
+          className="object-contain"
+        />
       </div>
     </footer>
   );
