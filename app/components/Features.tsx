@@ -8,12 +8,6 @@ const FEATURES = [
       "Book trusted artisans for plumbing, electrical work, carpentry, painting, and more.",
   },
   {
-    icon: "/images/features/beauty-at-home.png",
-    title: "Beauty at Home",
-    description:
-      "Request a hairstylist, barber, nail technician, or makeup artist to come to your location.",
-  },
-  {
     icon: "/images/features/cleaning.png",
     title: "Cleaning",
     description:

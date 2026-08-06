@@ -1,15 +1,5 @@
 import Image from "next/image";
-
-const CATEGORIES = [
-  { icon: "cleaner", label: "Cleaner" },
-  { icon: "electrician", label: "Electrician" },
-  { icon: "plumber", label: "Plumber" },
-  { icon: "carpenter", label: "Carpenter" },
-  { icon: "painter", label: "Painter" },
-  { icon: "ac-technician", label: "AC Technician" },
-  { icon: "tiler", label: "Tiler" },
-  { icon: "welder", label: "Welder" },
-];
+import { CATEGORIES } from "./categoriesData";
 
 export default function ServiceCategories() {
   return (

@@ -2,13 +2,12 @@ import Image from "next/image";
 import WaitlistForm from "./WaitlistForm";
 import HeroSlideshow from "./HeroSlideshow";
 import HeroNav from "./HeroNav";
+import { CATEGORIES } from "./categoriesData";
 
-const CATEGORIES = [
-  { icon: "plumber", label: "Plumbing" },
-  { icon: "electrician", label: "Electrical" },
-  { icon: "painter", label: "Painting" },
-  { icon: "carpenter", label: "Carpentry" },
-];
+const HERO_CATEGORY_LABELS = ["Plumber", "Electrician", "Painter", "Carpenter"];
+const HERO_CATEGORIES = CATEGORIES.filter((category) =>
+  HERO_CATEGORY_LABELS.includes(category.label),
+);
 
 export default function Hero() {
   return (
@@ -53,7 +52,7 @@ export default function Hero() {
         </div>
 
         <div className=" flex flex-wrap gap-2 sm:gap-3">
-          {CATEGORIES.map(({ icon, label }) => (
+          {HERO_CATEGORIES.map(({ icon, label }) => (
             <div
               key={label}
               className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-2 text-sm font-medium text-black"

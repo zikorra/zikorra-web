@@ -89,7 +89,6 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
               "Air Conditioning (AC)",
               "Generator Repairs",
               "Appliance Repairs",
-              "Beautician (Barber, hair dresser, braider)",
               "Cleaning",
               "Painting",
               "And many more skilled services as we continue to expand.",
