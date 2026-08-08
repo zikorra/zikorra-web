@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ChevronRight, Contact } from "lucide-react";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -10,10 +11,14 @@ export default function WaitlistForm({
   className = "",
   formBg = "bg-[#EEF1F4]",
   centered = false,
+  bordered = false,
+  icon = "contact",
 }: {
   className?: string;
   formBg?: string;
   centered?: boolean;
+  bordered?: boolean;
+  icon?: "contact" | "mail";
 }) {
   const [contact, setContact] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -64,12 +69,22 @@ export default function WaitlistForm({
     <div className={className}>
       <form
         onSubmit={handleSubmit}
-        className={`flex max-w-md flex-col items-stretch gap-3 sm:flex-row sm:gap-0 sm:overflow-hidden sm:rounded-full ${centered ? "mx-auto" : ""}`}
+        className={`flex max-w-md flex-col items-stretch gap-3 sm:flex-row sm:gap-0 sm:overflow-hidden sm:rounded-full ${bordered ? "sm:border sm:border-[#E7EAEE]" : ""} ${centered ? "mx-auto" : ""}`}
       >
         <div
-          className={`flex min-w-0 items-center gap-2 rounded-2xl px-4 py-3.5 sm:flex-1 sm:rounded-none sm:py-4 sm:pl-5 ${formBg}`}
+          className={`flex min-w-0 items-center gap-2 rounded-2xl px-4 py-3.5 sm:flex-1 sm:rounded-none sm:py-4 sm:pl-5 ${bordered ? "border border-[#E7EAEE] sm:border-0" : ""} ${formBg}`}
         >
-          <Contact className="h-4 w-4 shrink-0 text-[#8A8A8A]" aria-hidden />
+          {icon === "mail" ? (
+            <Image
+              src="/icons/mail-icon.svg"
+              alt=""
+              width={18}
+              height={18}
+              className="h-4 w-4 shrink-0"
+            />
+          ) : (
+            <Contact className="h-4 w-4 shrink-0 text-[#8A8A8A]" aria-hidden />
+          )}
           <input
             type="text"
             required

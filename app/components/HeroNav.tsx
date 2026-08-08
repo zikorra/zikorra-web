@@ -43,14 +43,21 @@ export default function HeroNav() {
   }, []);
 
   return (
-    <div className="relative z-10 flex items-center justify-between">
+    <div className="flex items-center justify-between border-b border-[#EDEFF2] px-6 py-4 sm:px-10 sm:py-5 md:px-20">
       <Link href="/" className="flex items-center gap-2">
         <Image
-          src="/icons/zikorra-logo-white.svg"
+          src="/icon.png"
+          alt=""
+          width={36}
+          height={36}
+          className="h-7 w-7 shrink-0 object-contain sm:h-8 sm:w-8"
+        />
+        <Image
+          src="/icons/zikorra-wordmark.png"
           alt="Zikorra"
-          width={140}
-          height={32}
-          className="h-6 w-auto sm:h-7"
+          width={1440}
+          height={287}
+          className="h-4 w-auto object-contain sm:h-[18px]"
         />
       </Link>
 
@@ -63,8 +70,8 @@ export default function HeroNav() {
             <Link
               key={link.label}
               href={link.href}
-              className={`text-xs leading-4 font-medium transition-colors hover:text-white sm:text-[15px] sm:leading-[22px] ${
-                isActive ? "text-white" : "text-white/70"
+              className={`text-xs leading-4 font-medium transition-colors hover:text-[#0B1220] sm:text-[15px] sm:leading-[22px] ${
+                isActive ? "text-[#0B1220]" : "text-[#8A8A8A]"
               }`}
             >
               {link.label}

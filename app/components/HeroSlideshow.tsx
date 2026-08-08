@@ -27,7 +27,7 @@ export default function HeroSlideshow() {
   }, []);
 
   return (
-    <div className="absolute inset-0 -z-20 bg-black">
+    <div className="absolute inset-0 bg-black">
       {SLIDES.map(({ src, poster }, index) => (
         <video
           key={src}
