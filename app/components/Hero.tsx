@@ -37,17 +37,16 @@ export default function Hero() {
             Trusted professionals for every home service.
           </h1>
 
-          <p className="mt-3 max-w-md text-sm leading-5 font-medium text-[#5B6472] sm:mt-4 sm:max-w-lg sm:text-base sm:leading-6">
+          <p className="mt-3 max-w-md text-sm leading-5 font-medium text-[##777777] sm:mt-4 sm:max-w-[583px] sm:text-base sm:leading-6">
             Zikorra connects you with verified professionals for repairs,
             maintenance, inspections, and property care across Nigeria.
           </p>
 
           <WaitlistForm
             className="mt-5 sm:mt-6"
-            formBg="bg-white"
             centered
-            bordered
             icon="mail"
+            variant="inset"
           />
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:mt-8 sm:gap-x-9">
@@ -78,7 +77,7 @@ export default function Hero() {
           {GRID_CATEGORIES.map(({ icon, label }) => (
             <div
               key={label}
-              className="flex items-center gap-2 rounded-2xl border border-[#EEF1F4] bg-[#FAFBFC] px-3.5 py-3.5 sm:px-4 sm:py-4"
+              className="flex items-center gap-2 rounded-2xl border border-[#F4F4F4] bg-[#FCFCFC] px-3.5 py-3.5 sm:px-4 sm:py-4"
             >
               <Image
                 src={`/icons/categories/${icon}.svg`}
