@@ -1,4 +1,5 @@
 import Hero from "./components/Hero";
+import TrustFeatures from "./components/TrustFeatures";
 import ServiceCategories from "./components/ServiceCategories";
 import HowItWorks from "./components/HowItWorks";
 import Features from "./components/Features";
@@ -12,10 +13,9 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
       <Hero />
-      <ServiceCategories />
-      <HowItWorks />
-      <Features />
+      <TrustFeatures />
       <AvailableProfessionals />
+      <Features />
       <HowItHelps />
       <Faq />
       <CtaSection />

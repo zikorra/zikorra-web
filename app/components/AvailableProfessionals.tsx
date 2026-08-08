@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Sparkles, Zap, Wrench } from "lucide-react";
+import { Sparkles, Zap, Wrench, Hammer } from "lucide-react";
 
 const PROFESSIONALS = [
   {
@@ -21,18 +21,25 @@ const PROFESSIONALS = [
     description:
       "Leak repairs, pipe installations, drain cleaning, inspections & more.",
   },
+  {
+    image: "/images/professionals/carpenter.jpg",
+    icon: Hammer,
+    title: "Carpenter",
+    description:
+      "Furniture repairs, custom woodwork, fittings, and installations.",
+  },
 ];
 
 export default function AvailableProfessionals() {
   return (
     <section className="bg-[#F8FAFC] py-16 sm:py-10">
       <div className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <div className="flex gap-4">
+        <div className="flex">
           {PROFESSIONALS.map(
             ({ image, icon: Icon, title, description }, index) => (
               <div
                 key={`${title}-${index}`}
-                className="relative aspect-[4/5] w-[80%] shrink-0 overflow-hidden rounded-2xl sm:w-[calc(25%+2rem)]"
+                className="relative aspect-[4/5] w-[80%] shrink-0 overflow-hidden sm:w-[calc(25%+2rem)]"
               >
                 <Image
                   src={image}
@@ -42,8 +49,9 @@ export default function AvailableProfessionals() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-[#005EEB4D]" />
 
-                <span className="absolute top-4 right-4 rounded-full bg-[#0B2C99] px-3 py-1.5 text-xs font-semibold text-white">
+                <span className="absolute top-4 right-4 rounded-full bg-[#005EEB] px-3 py-1.5 text-xs font-semibold text-white">
                   Available Online
                 </span>
 

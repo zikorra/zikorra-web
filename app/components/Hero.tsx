@@ -33,7 +33,7 @@ export default function Hero() {
             Nigeria&apos;s Managed Home &amp; Property Service Platform
           </div>
 
-          <h1 className="mt-4 max-w-[640px] text-[32px] leading-[38px] font-semibold tracking-[-0.04em] text-[#0B1220] sm:mt-5 sm:text-5xl sm:leading-[56px] md:text-[56px] md:leading-[62px]">
+          <h1 className="mt-4 max-w-[640px] text-[32px] leading-[38px] font-semibold tracking-[-0.04em] text-[#0B1220] sm:mt-5 sm:text-5xl sm:leading-[56px] md:text-[60px] md:leading-[62px]">
             Trusted professionals for every home service.
           </h1>
 
