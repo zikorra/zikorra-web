@@ -68,7 +68,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative isolate mt-2 aspect-[16/8] overflow-hidden rounded-[20px] sm:mt-4 sm:rounded-[28px]">
+        <div className="relative isolate mt-2 aspect-[4/5] overflow-hidden rounded-[20px] sm:mt-4 sm:aspect-[16/8] sm:rounded-[28px]">
           <HeroSlideshow />
           <TestimonialCard className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8" />
         </div>
