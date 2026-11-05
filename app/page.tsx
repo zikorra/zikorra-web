@@ -6,6 +6,7 @@ import Features from "./components/Features";
 import AvailableProfessionals from "./components/AvailableProfessionals";
 import HowItHelps from "./components/HowItHelps";
 import Faq from "./components/Faq";
+import HowItWorks from "./components/HowItWorks";
 import CtaSection from "./components/CtaSection";
 import Footer from "./components/Footer";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <ServiceCategories />
       <Testimonials />
       <Faq />
+      <HowItWorks />
       <AvailableProfessionals />
       <Features />
       <CtaSection />

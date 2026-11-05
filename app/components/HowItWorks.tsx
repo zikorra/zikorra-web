@@ -1,51 +1,65 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
+import { Plus } from "lucide-react";
+import styles from "./HowItWorks.module.css";
 
 const STEPS = [
   {
-    image: "/images/how-it-works/step-1.jpg",
-    alt: "Customer requesting a service from their phone",
-    title: "Tell us what you need",
+    title: "Request a Service",
+    description: "Tell us what you need done, whether it's a repair, cleaning or maintenance. Describe the job, add photos or videos and send your request in a few simple steps.",
   },
   {
-    image: "/images/how-it-works/step-2.jpg",
-    alt: "Verified professional carrying out the service",
-    title: "Get trusted artisans",
+    title: "Verified Professionals",
+    description: "Connect with verified professionals for your home. Review their profiles and discuss what needs to be done before agreeing on the job and price.",
   },
   {
-    image: "/images/how-it-works/step-3.jpg",
-    alt: "Secure payment on completion",
-    title: "Track and pay safely",
+    title: "Protected Payments",
+    description: "Agree on the price before paying securely through Zikorra. Keep a clear record of your service costs and payments in one place.",
+  },
+  {
+    title: "Job Tracking & Verification",
+    description: "Stay updated on your job from start to finish. Confirm the professional who arrives, follow progress and verify the work when the job is done.",
   },
 ];
 
 export default function HowItWorks() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
   return (
-    <section className="bg-white px-6 py-16 sm:py-20">
-      <div className="mx-auto max-w-[1240px]">
-        <h2 className="text-2xl leading-8 font-semibold tracking-[-0.04em] text-black sm:text-[32px] sm:leading-9">
-          How it works
+    <section className={styles.section} aria-labelledby="experience-heading">
+      <div className={styles.container}>
+        <span className={styles.badge}>THE ZIKORRA EXPERIENCE</span>
+        <h2 id="experience-heading" className={styles.heading}>
+          Everything you need to get the job done. All in one place.
         </h2>
-
-        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5">
-          {STEPS.map(({ image, alt, title }) => (
-            <div
-              key={image}
-              className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#F1F1F1]"
-            >
-              <Image
-                src={image}
-                alt={alt}
-                fill
-                sizes="(min-width: 640px) 33vw, 100vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-100 transition-opacity duration-300 sm:opacity-0 sm:group-hover:opacity-100">
-                <span className="px-6 text-center text-lg font-semibold text-white sm:text-xl">
-                  {title}
-                </span>
-              </div>
-            </div>
-          ))}
+        <div className={styles.layout}>
+          <div className={styles.steps}>
+            {STEPS.map((step, index) => {
+              const isOpen = openIndex === index;
+              return (
+                <div key={step.title} className={styles.step} data-open={isOpen}>
+                  <h3>
+                    <button type="button" className={styles.button}
+                      id={`experience-step-${index}`} aria-expanded={isOpen}
+                      aria-controls={`experience-answer-${index}`}
+                      onClick={() => setOpenIndex(isOpen ? null : index)}>
+                      <span>{String(index + 1).padStart(2, "0")}. {step.title}</span>
+                      <span className={styles.toggle} aria-hidden="true"><Plus size={24} strokeWidth={2} /></span>
+                    </button>
+                  </h3>
+                  <div id={`experience-answer-${index}`} aria-labelledby={`experience-step-${index}`}
+                    className={styles.panel} aria-hidden={!isOpen} inert={!isOpen}>
+                    <div className={styles.clip}><p className={styles.description}>{step.description}</p></div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className={styles.visual}>
+            <Image src="/images/how-it-works/step-1.jpg" alt="Customer requesting a home service on their phone"
+              fill sizes="(min-width: 1280px) 590px, (min-width: 768px) 46vw, 90vw" className={styles.image} />
+          </div>
         </div>
       </div>
     </section>
