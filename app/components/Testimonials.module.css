@@ -7,11 +7,11 @@
 .reviews { position: relative; isolation: isolate; margin-top: 64px; overflow: hidden; padding-block: 1px 16px; }
 .reviews::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to right, #fff, rgb(255 255 255 / 0) 20%, rgb(255 255 255 / 0) 80%, #fff); }
 .curve { position: absolute; inset: 45px 0 0; width: 100%; height: calc(100% - 45px); z-index: -1; }
-.viewport { overflow-x: auto; scrollbar-width: thin; scroll-snap-type: x mandatory; }
+.viewport { overflow-x: auto; scrollbar-width: thin; scroll-snap-type: none; }
 .viewport + .viewport { margin-top: 20px; }
 .viewport:focus-visible { outline: 2px solid #0c75ff; outline-offset: -2px; }
-.row { display: flex; gap: 20px; width: max-content; position: relative; left: 50%; transform: translateX(-50%); padding-inline: 20px; }
-.secondRow { transform: translateX(calc(-50% + 150px)); }
+.row { display: flex; gap: 20px; width: max-content; padding-inline: 20px; }
+.secondRow { padding-left: 170px; }
 .card { display: flex; flex-direction: column; width: 400px; min-height: 264px; padding: 20px; margin: 0; background: #fcfcfc; border: 1px solid #efefef; border-radius: 14px; scroll-snap-align: center; }
 .quoteMark { height: 52px; color: #0c75ff; font-family: Georgia, serif; font-size: 68px; font-weight: 700; line-height: 1; }
 .quote { margin-top: 12px; font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: -.42px; color: #3e3e3e; }

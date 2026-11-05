@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroNav from "./HeroNav";
+import HeroVideo from "./HeroVideo";
 import HeroGallery from "./HeroGallery";
 import { Fragment } from "react";
 import { CATEGORIES } from "./categoriesData";
@@ -92,14 +93,7 @@ export default function Hero() {
               </div>
               {(index === 0 || index === 2) && (
                 <div className={styles.photo}>
-                  <video
-                    src={`/videos/hero/hero-service-${index === 0 ? "01" : "02"}.mp4`}
-                    autoPlay muted loop playsInline preload="metadata"
-                    className={styles.video}
-                    aria-label="Zikorra professionals helping a customer at home"
-                  >
-                    Your browser does not support video playback.
-                  </video>
+                  <HeroVideo src={`/videos/hero/hero-service-${index === 0 ? "01" : "02"}.mp4`} />
                 </div>
               )}
             </Fragment>

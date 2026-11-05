@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import AutoScroll from "./AutoScroll";
 import styles from "./Testimonials.module.css";
 
 const REVIEWS = [
@@ -100,13 +101,7 @@ export default function Testimonials() {
           />
         </svg>
         {rows.map((reviews, index) => (
-          <div
-            key={index}
-            className={styles.viewport}
-            role="region"
-            aria-label={`Customer reviews, row ${index + 1}`}
-            tabIndex={0}
-          >
+          <AutoScroll key={index} className={styles.viewport} label={`Customer reviews, row ${index + 1}`} centered reverse={index === 1}>
             <div
               className={`${styles.row} ${index === 1 ? styles.secondRow : ""}`}
             >
@@ -114,7 +109,7 @@ export default function Testimonials() {
                 <Review key={review.name} review={review} />
               ))}
             </div>
-          </div>
+          </AutoScroll>
         ))}
       </div>
     </section>
