@@ -70,9 +70,11 @@
 .broom { top: 106px; right: 12.7%; }
 .pipe { bottom: 115px; left: 18%; }
 .hammer { bottom: 105px; right: 18%; }
-.gallery { overflow: hidden; }
-.photoStrip { display: flex; gap: 10px; width: max-content; position: relative; left: 50%; transform: translateX(-50%); }
-.photo { position: relative; width: 27.3vw; max-width: 520px; aspect-ratio: 1.07; overflow: hidden; border-radius: 22px; background: #e6e4e0; }
+.gallery { overflow-x: auto; scrollbar-width: thin; scroll-snap-type: x mandatory; scroll-padding-inline: 20px; }
+.gallery:focus-visible { outline: 2px solid #0c75ff; outline-offset: -2px; }
+.photoStrip { display: flex; gap: 10px; width: max-content; padding-inline: 20px; }
+.photo { position: relative; flex-shrink: 0; width: 27.3vw; max-width: 520px; aspect-ratio: 1.07; overflow: hidden; border-radius: 22px; background: #e6e4e0; scroll-snap-align: start; }
+.video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .photoImage { object-fit: cover; }
 @media (min-width: 1600px) {
   .tool { width: 64px; }

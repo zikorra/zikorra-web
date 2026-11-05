@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroNav from "./HeroNav";
+import { Fragment } from "react";
 import { CATEGORIES } from "./categoriesData";
 import styles from "./Hero.module.css";
 
@@ -76,18 +77,32 @@ export default function Hero() {
           </ul>
         </div>
       </div>
-      <div className={styles.gallery}>
+      <div className={styles.gallery} tabIndex={0} role="region" aria-label="Photos and videos of Zikorra professionals">
         <div className={styles.photoStrip}>
-          {PHOTOS.map(({ name, alt }) => (
-            <div className={styles.photo} key={name}>
-              <Image
-                src={`/images/hero/hero-${name}.jpg`}
-                alt={alt}
-                fill
-                sizes="(max-width: 639px) 72vw, (max-width: 1023px) 42vw, 27.3vw"
-                className={styles.photoImage}
-              />
-            </div>
+          {PHOTOS.map(({ name, alt }, index) => (
+            <Fragment key={name}>
+              <div className={styles.photo}>
+                <Image
+                  src={`/images/hero/hero-${name}.jpg`}
+                  alt={alt}
+                  fill
+                  sizes="(max-width: 639px) 72vw, (max-width: 1023px) 42vw, 27.3vw"
+                  className={styles.photoImage}
+                />
+              </div>
+              {(index === 0 || index === 2) && (
+                <div className={styles.photo}>
+                  <video
+                    src={`/videos/hero/hero-service-${index === 0 ? "01" : "02"}.mp4`}
+                    autoPlay muted loop playsInline preload="metadata"
+                    className={styles.video}
+                    aria-label="Zikorra professionals helping a customer at home"
+                  >
+                    Your browser does not support video playback.
+                  </video>
+                </div>
+              )}
+            </Fragment>
           ))}
         </div>
       </div>
