@@ -15,6 +15,15 @@
 .question { display: flex; justify-content: space-between; align-items: flex-start; width: 100%; gap: 20px; padding: 24px 20px; cursor: pointer; text-align: left; font-size: 17px; line-height: 24px; font-weight: 600; letter-spacing: -.2px; }
 .item:first-child .question { padding-top: 8px; }
 .question svg { flex-shrink: 0; margin-top: 1px; }
+.toggleIcon { position: relative; flex-shrink: 0; width: 22px; height: 22px; }
+.toggleIcon svg { position: absolute; inset: 0; transition: opacity 240ms ease, transform 320ms ease; }
+.plus { opacity: 1; transform: rotate(0deg); }
+.minus { opacity: 0; transform: rotate(-90deg); }
+.item[data-open="true"] .plus { opacity: 0; transform: rotate(90deg); }
+.item[data-open="true"] .minus { opacity: 1; transform: rotate(0deg); }
+.answerPanel { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 360ms cubic-bezier(.22, 1, .36, 1), opacity 240ms ease; }
+.item[data-open="true"] .answerPanel { grid-template-rows: 1fr; opacity: 1; }
+.answerClip { min-height: 0; overflow: hidden; }
 .answer { padding: 0 20px 24px; color: #caddff; font-size: 15px; line-height: 22px; font-weight: 500; letter-spacing: -.3px; }
 .answer p + p, .answer ul { margin-top: 10px; }
 .answer ul { padding-left: 20px; list-style: disc; }
@@ -39,4 +48,7 @@
   .answer { padding: 0 0 22px; }
   .more { margin-left: 0; }
   .contact { width: 100%; max-width: 340px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .answerPanel, .toggleIcon svg { transition: none; }
 }

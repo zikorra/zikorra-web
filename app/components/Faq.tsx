@@ -37,9 +37,8 @@ export default function Faq() {
         <div className={styles.questions}>
           {visibleFaqs.map((item, index) => {
             const isOpen = openIndex === index;
-            const Icon = isOpen ? Minus : Plus;
             return (
-              <div key={item.question} className={styles.item}>
+              <div key={item.question} className={styles.item} data-open={isOpen}>
                 <h3>
                   <button
                     id={`faq-question-${index}`}
@@ -50,15 +49,21 @@ export default function Faq() {
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                   >
                     <span>{item.question}</span>
-                    <Icon size={22} strokeWidth={1.5} aria-hidden="true" />
+                    <span className={styles.toggleIcon} aria-hidden="true">
+                      <Plus className={styles.plus} size={22} strokeWidth={1.5} />
+                      <Minus className={styles.minus} size={22} strokeWidth={1.5} />
+                    </span>
                   </button>
                 </h3>
                 <div
                   id={`faq-answer-${index}`}
                   aria-labelledby={`faq-question-${index}`}
-                  hidden={!isOpen}
-                  className={styles.answer}
+                  aria-hidden={!isOpen}
+                  inert={!isOpen}
+                  className={styles.answerPanel}
                 >
+                  <div className={styles.answerClip}>
+                    <div className={styles.answer}>
                   {item.blocks.map((block, blockIndex) =>
                     block.type === "p" ? (
                       <p key={blockIndex}>{block.text}</p>
@@ -68,6 +73,8 @@ export default function Faq() {
                       </ul>
                     ),
                   )}
+                    </div>
+                  </div>
                 </div>
               </div>
             );
