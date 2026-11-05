@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Apple, X } from "lucide-react";
+import { X } from "lucide-react";
 import WaitlistForm from "./WaitlistForm";
 import styles from "./Footer.module.css";
 
@@ -46,7 +46,7 @@ export default function Footer() {
             <div><h3>Legal</h3><button type="button">Privacy Policy</button><button type="button">Terms of Service</button></div>
           </div>
           <div className={styles.stores}>
-            <a href="#waitlist" aria-label="Download on the App Store"><Apple size={30} fill="currentColor" aria-hidden="true" /><span>Download on<strong>App Store</strong></span></a>
+            <a href="#waitlist" aria-label="Download on the App Store"><svg width="30" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c.03 3.1 2.72 4.13 2.75 4.14-.02.07-.43 1.47-1.42 2.92-.86 1.25-1.75 2.5-3.15 2.53-1.38.03-1.83-.82-3.41-.82-1.59 0-2.08.8-3.39.85-1.35.05-2.39-1.36-3.25-2.6-1.76-2.55-3.1-7.21-1.3-10.36a5.04 5.04 0 0 1 4.28-2.59c1.34-.03 2.61.91 3.42.91.82 0 2.35-1.12 3.96-.96.67.03 2.55.27 3.76 2.05-.1.06-2.25 1.31-2.23 3.93ZM14.45 4.83c.72-.87 1.21-2.08 1.08-3.28-1.04.04-2.3.69-3.04 1.56-.67.77-1.26 2-1.1 3.18 1.16.09 2.34-.59 3.06-1.46Z" /></svg><span>Download on<strong>App Store</strong></span></a>
             <a href="#waitlist" aria-label="Download on Google Play"><svg width="28" height="32" viewBox="0 0 28 32" aria-hidden="true"><path d="M1 1 17 16 1 31Z" fill="#23b6ef"/><path d="m1 1 20 11-4 4Z" fill="#26b55d"/><path d="m17 16 4-4 7 4-7 4Z" fill="#ffce32"/><path d="m1 31 16-15 4 4Z" fill="#f24454"/></svg><span>Download on<strong>PlayStore</strong></span></a>
           </div>
         </div>
