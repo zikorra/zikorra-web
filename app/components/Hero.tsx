@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroNav from "./HeroNav";
+import HeroGallery from "./HeroGallery";
 import { Fragment } from "react";
 import { CATEGORIES } from "./categoriesData";
 import styles from "./Hero.module.css";
@@ -77,8 +78,7 @@ export default function Hero() {
           </ul>
         </div>
       </div>
-      <div className={styles.gallery} tabIndex={0} role="region" aria-label="Photos and videos of Zikorra professionals">
-        <div className={styles.photoStrip}>
+      <HeroGallery>
           {PHOTOS.map(({ name, alt }, index) => (
             <Fragment key={name}>
               <div className={styles.photo}>
@@ -104,8 +104,7 @@ export default function Hero() {
               )}
             </Fragment>
           ))}
-        </div>
-      </div>
+      </HeroGallery>
     </section>
   );
 }
