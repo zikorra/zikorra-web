@@ -1,94 +1,76 @@
 import Image from "next/image";
-import WaitlistForm from "./WaitlistForm";
-import HeroSlideshow from "./HeroSlideshow";
 import HeroNav from "./HeroNav";
-import TestimonialCard from "./TestimonialCard";
 import { CATEGORIES } from "./categoriesData";
+import styles from "./Hero.module.css";
 
-const QUICK_CATEGORY_LABELS = ["Plumber", "Electrician", "Cleaner", "Carpenter"];
-const QUICK_CATEGORIES = QUICK_CATEGORY_LABELS.map((label) =>
-  CATEGORIES.find((category) => category.label === label)!,
+const QUICK_CATEGORIES = ["Plumber", "Electrician", "Cleaner", "Carpenter"].map(
+  (label) => CATEGORIES.find((category) => category.label === label)!,
 );
 
-const GRID_CATEGORY_LABELS = ["Cleaner", "Electrician", "Plumber", "Carpenter"];
-const GRID_CATEGORIES = GRID_CATEGORY_LABELS.map((label) =>
-  CATEGORIES.find((category) => category.label === label)!,
-);
+const PHOTOS = [
+  { name: "electrical-repair", alt: "Zikorra professional repairing a wall socket" },
+  { name: "painter", alt: "Zikorra painter painting an interior wall" },
+  { name: "electrician", alt: "Zikorra electrician checking an electrical panel" },
+  { name: "plumber", alt: "Zikorra plumber repairing pipes beneath a sink" },
+  { name: "cleaner", alt: "Zikorra cleaner cleaning a kitchen" },
+];
 
 export default function Hero() {
   return (
-    <section className="bg-white">
+    <section className={styles.hero}>
       <HeroNav />
-
-      <div className="mx-auto max-w-[1240px] px-6 sm:px-10 md:px-20">
-        <div className="flex flex-col items-center pt-10 pb-8 text-center sm:pt-16 sm:pb-10">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#E7EAEE] bg-white px-4 py-1.5 text-xs leading-4 font-medium text-[#0B1220] sm:text-[15px] sm:leading-6">
+      <div className={styles.intro}>
+        <div className={styles.tools} aria-hidden="true">
+          {["drill", "broom", "pipe", "hammer"].map((tool) => (
             <Image
-              src="/icons/badge-icon.png"
+              key={tool}
+              src={`/images/hero/hero-${tool}.png`}
               alt=""
-              width={117}
-              height={128}
-              className="h-4 w-auto shrink-0 object-contain"
+              width={168}
+              height={174}
+              className={`${styles.tool} ${styles[tool]}`}
+              sizes="(max-width: 639px) 40px, (max-width: 1023px) 52px, 64px"
             />
-            Nigeria&apos;s Managed Home &amp; Property Service Platform
+          ))}
+        </div>
+        <div className={styles.content}>
+          <div className={styles.badge}>
+            <Image src="/icons/badge-icon.png" alt="" width={20} height={22} />
+            <span>Nigeria’s Managed Home &amp; Property Service Platform</span>
           </div>
-
-          <h1 className="mt-4 max-w-[640px] text-[32px] leading-[38px] font-semibold tracking-[-0.04em] text-[#0B1220] sm:mt-5 sm:text-5xl sm:leading-[56px] md:text-[60px] md:leading-[62px]">
-            Trusted professionals for every home service.
+          <h1 className={styles.heading}>
+            Find plumbers, electricians,<br className={styles.desktopBreak} />{" "}
+            cleaners <span className={styles.highlight}>and more.</span>
           </h1>
-
-          <p className="mt-3 max-w-md text-sm leading-5 font-medium text-[##777777] sm:mt-4 sm:max-w-[583px] sm:text-base sm:leading-6">
-            Zikorra connects you with verified professionals for repairs,
-            maintenance, inspections, and property care across Nigeria.
+          <p className={styles.description}>
+            Find verified professionals for your home, agree on the price before
+            paying, and stay updated on every job from start to finish.
           </p>
-
-          <WaitlistForm
-            className="mt-5 sm:mt-6"
-            centered
-            icon="mail"
-            variant="inset"
-          />
-
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:mt-8 sm:gap-x-9">
-            {QUICK_CATEGORIES.map(({ icon, label }) => (
-              <div
-                key={label}
-                className="flex items-center gap-1.5 text-sm font-medium text-[#0B1220]"
-              >
-                <Image
-                  src={`/icons/categories/${icon}.svg`}
-                  alt=""
-                  width={14}
-                  height={14}
-                  className="h-3.5 w-3.5 brightness-0"
-                />
-                {label}
-              </div>
-            ))}
+          <div className={styles.actions}>
+            <a href="#waitlist" className={styles.primary}>Download Customer app</a>
+            <a href="#waitlist" className={styles.secondary}>Download Artisan App</a>
           </div>
-        </div>
-
-        <div className="relative isolate mt-2 aspect-[4/5] overflow-hidden rounded-[20px] sm:mt-4 sm:aspect-[16/8] sm:rounded-[28px]">
-          <HeroSlideshow />
-          <TestimonialCard className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8" />
-        </div>
-
-        <div className="grid grid-cols-2 gap-2.5 py-6 sm:grid-cols-4 sm:gap-3 sm:py-8">
-          {GRID_CATEGORIES.map(({ icon, label }) => (
-            <div
-              key={label}
-              className="flex items-center gap-2 rounded-2xl border border-[#F4F4F4] bg-[#FCFCFC] px-3.5 py-3.5 sm:px-4 sm:py-4"
-            >
-              <Image
-                src={`/icons/categories/${icon}.svg`}
-                alt=""
-                width={30}
-                height={30}
-                className="h-5 w-5 shrink-0"
-              />
-              <span className="text-sm font-semibold text-[#0B1220] sm:text-base">
+          <ul className={styles.categories} aria-label="Home services">
+            {QUICK_CATEGORIES.map(({ icon, label }) => (
+              <li key={label}>
+                <Image src={`/icons/categories/${icon}.svg`} alt="" width={20} height={20} />
                 {label}
-              </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className={styles.gallery}>
+        <div className={styles.photoStrip}>
+          {PHOTOS.map(({ name, alt }) => (
+            <div className={styles.photo} key={name}>
+              <Image
+                src={`/images/hero/hero-${name}.jpg`}
+                alt={alt}
+                fill
+                sizes="(max-width: 639px) 72vw, (max-width: 1023px) 42vw, 27.3vw"
+                className={styles.photoImage}
+              />
             </div>
           ))}
         </div>

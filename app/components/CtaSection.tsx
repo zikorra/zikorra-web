@@ -5,7 +5,7 @@ const manrope = Manrope({ subsets: ["latin"] });
 
 export default function CtaSection() {
   return (
-    <section className="bg-white px-6 py-20">
+    <section id="waitlist" className="scroll-mt-8 bg-white px-6 py-20">
       <div className="relative z-0 mx-auto max-w-[1339px] overflow-hidden rounded-3xl bg-[#005EEB] px-6 pt-16 pb-52 text-center sm:px-12 sm:pb-40">
         <div
           aria-hidden
