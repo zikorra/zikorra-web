@@ -15,7 +15,7 @@
 .arrow svg { color: white; }
 .download:hover { text-decoration: underline; text-underline-offset: 4px; }
 .download:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
-.preview { margin: 24px 0 0 22px; height: 240px; overflow: hidden; }
+.preview { margin: 24px 0 0 22px; overflow: hidden; }
 .previewImage { width: 100%; height: auto; object-fit: contain; object-position: top left; }
 @media (max-width: 1023px) {
   .section { padding-block: 80px; }
@@ -23,7 +23,7 @@
   .copy { padding-inline: 20px; }
   .title { min-height: 52px; }
   .description { min-height: 100px; }
-  .preview { margin-left: 20px; height: 210px; }
+  .preview { margin-left: 20px; }
 }
 @media (max-width: 767px) {
   .section { padding: 64px 20px; }
@@ -32,6 +32,5 @@
   .intro { margin-top: 20px; }
   .cards { grid-template-columns: 1fr; margin-top: 32px; gap: 20px; }
   .title, .description { min-height: auto; }
-  .preview { height: clamp(200px, 60vw, 340px); }
   .title { margin-top: 18px; }
 }

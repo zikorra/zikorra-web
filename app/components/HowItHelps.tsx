@@ -9,8 +9,9 @@ const APPS = [
     description:
       "Find verified professionals for repairs, cleaning and maintenance. Agree on the price, pay securely through Zikorra and stay updated until the job is done.",
     action: "Download Customer App",
-    image: "/images/how-it-helps/customer-card.png",
-    alt: "A customer coordinating a home repair with a Zikorra professional",
+    image: "/images/how-it-helps/customer-app-phones.png",
+    width: 1183,
+    alt: "Zikorra Customer App showing the home screen, artisan profile and bookings",
     variant: "customer",
   },
   {
@@ -19,8 +20,9 @@ const APPS = [
     description:
       "Receive job offers, connect with customers, agree on prices and manage your jobs and earnings, all through the Zikorra Professional App.",
     action: "Download Artisan App",
-    image: "/images/how-it-helps/artisan-card.png",
-    alt: "A verified Zikorra professional’s profile",
+    image: "/images/how-it-helps/artisan-app-phones.png",
+    width: 1181,
+    alt: "Zikorra Artisan App showing job offers, customer chat and wallet",
     variant: "artisan",
   },
 ];
@@ -50,7 +52,7 @@ export default function HowItHelps() {
                 </a>
               </div>
               <div className={styles.preview}>
-                <Image src={app.image} alt={app.alt} width={1220} height={910}
+                <Image src={app.image} alt={app.alt} width={app.width} height={479}
                   sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 90vw"
                   className={styles.previewImage} />
               </div>
