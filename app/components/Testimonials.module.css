@@ -3,7 +3,7 @@
 .badge { display: inline-flex; align-items: center; gap: 8px; padding: 3px 18px 3px 3px; border-radius: 999px; background: #000; color: #fff; font-size: 13px; line-height: 24px; font-weight: 500; }
 .badge > span { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: #0c75ff; }
 .heading { margin-top: 18px; font-size: 40px; line-height: 1.2; letter-spacing: -.69px; font-weight: 600; color: #000; }
-.intro { max-width: 540px; margin: 20px auto 0; font-size: 16px; line-height: 22px; letter-spacing: -.42px; font-weight: 500; color: #a3a3a3; }
+.intro { max-width: 540px; margin: 20px auto 0; font-size: 16px; line-height: 22px; letter-spacing: -.42px; font-weight: 500; color: #707070; }
 .reviews { position: relative; isolation: isolate; margin-top: 64px; overflow: hidden; padding-block: 1px 16px; }
 .reviews::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to right, #fff, rgb(255 255 255 / 0) 20%, rgb(255 255 255 / 0) 80%, #fff); }
 .curve { position: absolute; inset: 45px 0 0; width: 100%; height: calc(100% - 45px); z-index: -1; }
@@ -19,7 +19,7 @@
 .avatar { display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: #e7efff; color: #0758c5; font-size: 14px; font-weight: 600; }
 .name, .service { display: block; font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -.42px; }
 .name { color: #000; }
-.service { color: #969696; }
+.service { color: #707070; }
 @media (max-width: 1023px) {
   .section { padding-block: 64px; }
   .heading { font-size: 36px; }

@@ -13,7 +13,7 @@
 .panel { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 360ms cubic-bezier(.22,1,.36,1), opacity 240ms ease; }
 .step[data-open="true"] .panel { grid-template-rows: 1fr; opacity: 1; }
 .clip { min-height: 0; overflow: hidden; }
-.description { padding: 0 16px 38px 0; color: #a3a3a3; font-size: 15px; line-height: 22px; letter-spacing: -.3px; font-weight: 500; }
+.description { padding: 0 16px 38px 0; color: #707070; font-size: 15px; line-height: 22px; letter-spacing: -.3px; font-weight: 500; }
 .visual { position: relative; aspect-ratio: 1.4; background: #f4f4f4; overflow: hidden; }
 .illustration { position: absolute; inset: 14% 9% 0; }
 .image { object-fit: contain; object-position: center bottom; }

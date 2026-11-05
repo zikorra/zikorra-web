@@ -27,7 +27,7 @@ npm run lint    # eslint
 - **React 19**
 - **Tailwind CSS v4** — theme tokens (brand color, fonts) are defined in `app/globals.css` via `@theme inline`, not a `tailwind.config.js`.
 - **lucide-react** for icons that aren't custom brand assets.
-- **next/font** — Geist is the site-wide default (loaded in `app/layout.tsx`); Geist Mono is also configured for monospace text.
+- **next/font/local** — bundled variable Geist is the site-wide default; its SIL license is in `app/fonts/OFL.txt`.
 
 ## Project structure
 
@@ -69,3 +69,7 @@ A couple of format notes learned the hard way:
 - The waitlist form submits email or phone details to the configured service and handles success and failure states.
 - The page is a single scrolling document (`app/page.tsx`), with the header preserved in `HeroNav.tsx`.
 - Social and legal footer items are placeholders until their destination URLs are supplied.
+
+## SEO and deployment
+
+See [the SEO implementation report](docs/seo-implementation.md) for route inventory, verification results, preview-indexing policy and Search Console setup. Public environment placeholders are in `.env.example`. Vercel production is indexable by default; other production hosts require `SEO_ALLOW_INDEXING=true` at build time. Keep previews and staging non-indexable.

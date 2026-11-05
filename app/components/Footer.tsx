@@ -155,6 +155,7 @@ export default function Footer() {
         </div>
       </div>
       <dialog
+        id="waitlist"
         ref={dialog}
         className={styles.dialog}
         onClose={closeWaitlist}

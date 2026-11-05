@@ -83,6 +83,8 @@ export default function WaitlistForm({
   const input = (
     <input
       type="text"
+      aria-label="Email address or phone number"
+      aria-invalid={Boolean(error)}
       required
       value={contact}
       onChange={(e) => setContact(e.target.value)}
@@ -132,7 +134,7 @@ export default function WaitlistForm({
         </form>
       )}
       {error && (
-        <p className="mx-auto mt-2 max-w-md text-center text-sm text-red-600">
+        <p role="alert" className="mx-auto mt-2 max-w-md text-center text-sm text-red-600">
           {error}
         </p>
       )}

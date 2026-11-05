@@ -13,7 +13,7 @@
   --color-brand: var(--brand);
   --color-brand-dark: var(--brand-dark);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: ui-monospace, monospace;
 }
 
 body {
@@ -21,3 +21,6 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
+
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 100; padding: 12px 16px; background: white; color: #0b1220; border: 2px solid #0758c5; transform: translateY(-150%); }
+.skip-link:focus { transform: translateY(0); }

@@ -11,7 +11,7 @@ const SERVICES = [
 
 export default function ServiceCategories() {
   return (
-    <section className={styles.section} aria-labelledby="services-heading">
+    <section id="what-we-do" className={styles.section} aria-labelledby="services-heading">
       <div className={styles.container}>
         <div className={styles.copy}>
           <h2 id="services-heading" className={styles.heading}>

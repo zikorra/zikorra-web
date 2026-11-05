@@ -41,7 +41,7 @@
   font-weight: 500;
   line-height: 22px;
   letter-spacing: -0.42px;
-  color: #a3a3a3;
+  color: #707070;
 }
 .actions { display: flex; justify-content: center; gap: 12px; margin-top: 30px; }
 .actions a {
@@ -56,9 +56,9 @@
   font-weight: 600;
   transition: background-color 150ms ease;
 }
-.primary { background: #0c75ff; color: white; border: 1px solid #0c75ff; }
+.primary { background: #0063df; color: white; border: 1px solid #0063df; }
 .primary:hover { background: #0063e6; }
-.secondary { color: #0c75ff; border: 1px solid #efefef; }
+.secondary { color: #0063df; border: 1px solid #efefef; }
 .secondary:hover { background: #edf5ff; }
 .actions a:focus-visible { outline: 3px solid #0758c5; outline-offset: 4px; }
 .categories { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; padding: 0; margin: 42px 0 0; list-style: none; }

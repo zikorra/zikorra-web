@@ -9,7 +9,7 @@
 .sidebar { display: flex; flex-direction: column; justify-content: space-between; gap: 64px; }
 .heading { font-size: 48px; line-height: 1.15; letter-spacing: -.69px; font-weight: 600; }
 .support p { font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: -.42px; }
-.contact { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; margin-top: 16px; border: 1px solid #eee; border-radius: 17px; background: #fafafa; color: #0c75ff; font-size: 16px; line-height: 24px; font-weight: 600; }
+.contact { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; margin-top: 16px; border: 1px solid #eee; border-radius: 17px; background: #fafafa; color: #0063df; font-size: 16px; line-height: 24px; font-weight: 600; }
 .contact:hover { background: #eaf2ff; }
 .item { border-bottom: 1px solid rgb(255 255 255 / 24%); }
 .question { display: flex; justify-content: space-between; align-items: flex-start; width: 100%; gap: 20px; padding: 24px 20px; cursor: pointer; text-align: left; font-size: 17px; line-height: 24px; font-weight: 600; letter-spacing: -.2px; }

@@ -43,7 +43,7 @@ export default function HeroNav() {
   }, []);
 
   return (
-    <div className="flex items-center justify-between border-b border-[#EDEFF2] px-6 py-4 sm:px-10 sm:py-5 md:px-20">
+    <header className="flex items-center justify-between border-b border-[#EDEFF2] px-6 py-4 sm:px-10 sm:py-5 md:px-20">
       <Link href="/" className="flex items-center gap-2">
         <Image
           src="/icon.png"
@@ -61,7 +61,7 @@ export default function HeroNav() {
         />
       </Link>
 
-      <nav className="flex items-center gap-4 sm:gap-8">
+      <nav aria-label="Main navigation" className="flex items-center gap-4 sm:gap-8">
         {NAV_LINKS.map((link) => {
           const isActive = link.sectionId
             ? activeSection === link.sectionId
@@ -79,6 +79,6 @@ export default function HeroNav() {
           );
         })}
       </nav>
-    </div>
+    </header>
   );
 }

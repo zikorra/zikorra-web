@@ -37,11 +37,11 @@ export default function HowItHelps() {
         </h2>
         <p className={styles.intro}>
           Two apps, one platform. Find trusted professionals for your home or
-          connect with customers and manage your jobs—all in one place.
+          connect with customers and manage your jobs—all in one place. Launching in Lagos.
         </p>
         <div className={styles.cards}>
           {APPS.map((app) => (
-            <article key={app.variant} className={styles.card}>
+            <article id={`${app.variant}-app`} key={app.variant} className={styles.card}>
               <div className={styles.copy}>
                 <p className={styles.audience}>{app.audience}</p>
                 <h3 className={styles.title}>{app.title}</h3>
