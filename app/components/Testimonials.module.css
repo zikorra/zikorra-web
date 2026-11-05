@@ -5,8 +5,9 @@
 .heading { margin-top: 18px; font-size: 40px; line-height: 1.2; letter-spacing: -.69px; font-weight: 600; color: #000; }
 .intro { max-width: 540px; margin: 20px auto 0; font-size: 16px; line-height: 22px; letter-spacing: -.42px; font-weight: 500; color: #a3a3a3; }
 .reviews { position: relative; isolation: isolate; margin-top: 64px; overflow: hidden; padding-block: 1px 16px; }
+.reviews::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to right, #fff, rgb(255 255 255 / 0) 20%, rgb(255 255 255 / 0) 80%, #fff); }
 .curve { position: absolute; inset: 45px 0 0; width: 100%; height: calc(100% - 45px); z-index: -1; }
-.viewport { overflow-x: auto; scrollbar-width: thin; scroll-snap-type: x mandatory; mask-image: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent); }
+.viewport { overflow-x: auto; scrollbar-width: thin; scroll-snap-type: x mandatory; }
 .viewport + .viewport { margin-top: 20px; }
 .viewport:focus-visible { outline: 2px solid #0c75ff; outline-offset: -2px; }
 .row { display: flex; gap: 20px; width: max-content; position: relative; left: 50%; transform: translateX(-50%); padding-inline: 20px; }
@@ -31,7 +32,7 @@
   .badge { font-size: 11px; }
   .intro { margin-top: 16px; }
   .reviews { margin-top: 32px; }
-  .viewport { mask-image: none; }
+  .reviews::after { display: none; }
   .row, .secondRow { left: auto; transform: none; gap: 12px; }
   .viewport + .viewport { margin-top: 12px; }
   .card { width: min(82vw, 350px); min-height: 290px; }
