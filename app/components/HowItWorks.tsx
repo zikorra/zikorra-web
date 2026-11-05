@@ -57,8 +57,10 @@ export default function HowItWorks() {
             })}
           </div>
           <div className={styles.visual}>
-            <Image src="/images/how-it-works/step-1.jpg" alt="Customer requesting a home service on their phone"
+            <div className={styles.illustration}>
+            <Image src="/images/how-it-works/request-service.png" alt="Illustration of a customer uploading a plumbing repair request from their phone"
               fill sizes="(min-width: 1280px) 590px, (min-width: 768px) 46vw, 90vw" className={styles.image} />
+            </div>
           </div>
         </div>
       </div>

@@ -15,7 +15,8 @@
 .clip { min-height: 0; overflow: hidden; }
 .description { padding: 0 16px 38px 0; color: #a3a3a3; font-size: 15px; line-height: 22px; letter-spacing: -.3px; font-weight: 500; }
 .visual { position: relative; aspect-ratio: 1.4; background: #f4f4f4; overflow: hidden; }
-.image { object-fit: contain; }
+.illustration { position: absolute; inset: 14% 9% 0; }
+.image { object-fit: contain; object-position: center bottom; }
 .button:focus-visible { outline: 2px solid #0c75ff; outline-offset: 4px; border-radius: 4px; }
 @media (max-width: 1023px) {
   .section { padding-block: 80px; }
