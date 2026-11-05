@@ -11,7 +11,7 @@
 .logo img { object-fit: contain; }
 .stay { margin-top: 36px; color: #000; font-size: 18px; line-height: 24px; font-weight: 600; }
 .socials { display: flex; align-items: center; gap: 16px; margin-top: 12px; color: #141a24; }
-.socials button { cursor: pointer; }
+.socials a { display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
 .copyright { margin-top: 36px; font-size: 14px; line-height: 22px; color: #707070; }
 .links { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 32px; }
 .links h3 { color: #000; font-size: 14px; line-height: 22px; font-weight: 600; margin-bottom: 10px; }

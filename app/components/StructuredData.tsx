@@ -1,3 +1,4 @@
+import { SOCIAL_LINKS } from "../lib/social";
 import { SITE_DESCRIPTION, SITE_URL } from "../lib/seo";
 
 export default function StructuredData() {
@@ -8,6 +9,7 @@ export default function StructuredData() {
         "@type": "Organization",
         "@id": `${SITE_URL}/#organization`,
         name: "Zikorra",
+        sameAs: [SOCIAL_LINKS.instagram, SOCIAL_LINKS.tiktok, SOCIAL_LINKS.x],
         url: `${SITE_URL}/`,
         logo: `${SITE_URL}/icons/zikorra-wordmark.png`,
         email: "support@zikorra.com",

@@ -68,7 +68,7 @@ A couple of format notes learned the hard way:
 - App download links open the waitlist dialog until store URLs are available.
 - The waitlist form submits email or phone details to the configured service and handles success and failure states.
 - The page is a single scrolling document (`app/page.tsx`), with the header preserved in `HeroNav.tsx`.
-- Social and legal footer items are placeholders until their destination URLs are supplied.
+- Social profile URLs are configured in `app/lib/social.ts`; legal footer items remain placeholders until their destination URLs are supplied.
 
 ## SEO and deployment
 

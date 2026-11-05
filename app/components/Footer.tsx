@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { X } from "lucide-react";
 import WaitlistForm from "./WaitlistForm";
+import { SOCIAL_LINKS } from "../lib/social";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -43,7 +44,7 @@ export default function Footer() {
           </Link>
           <p className={styles.stay}>Stay in touch</p>
           <div className={styles.socials}>
-            <button type="button" aria-label="Instagram">
+            <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" aria-label="Zikorra on Instagram (opens in a new tab)">
               <svg
                 width="19"
                 height="19"
@@ -63,8 +64,8 @@ export default function Footer() {
                   stroke="none"
                 />
               </svg>
-            </button>
-            <button type="button" aria-label="X">
+            </a>
+            <a href={SOCIAL_LINKS.x} target="_blank" rel="noopener noreferrer" aria-label="Zikorra on X (opens in a new tab)">
               <svg
                 width="18"
                 height="18"
@@ -74,8 +75,8 @@ export default function Footer() {
               >
                 <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.5-8.6L.8 2h6.5l4.5 6.8L18.9 2ZM17.8 20h1.8L6.2 4H4.3l13.5 16Z" />
               </svg>
-            </button>
-            <button type="button" aria-label="Facebook">
+            </a>
+            <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" aria-label="Zikorra on Facebook (opens in a new tab)">
               <svg
                 width="19"
                 height="19"
@@ -85,8 +86,8 @@ export default function Footer() {
               >
                 <path d="M24 12a12 12 0 1 0-13.9 11.85v-8.38H7.05V12h3.05V9.36c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.68.23 2.68.23v2.95H15.8c-1.49 0-1.95.92-1.95 1.87V12h3.32l-.53 3.47h-2.79v8.38A12 12 0 0 0 24 12Z" />
               </svg>
-            </button>
-            <button type="button" aria-label="LinkedIn">
+            </a>
+            <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer" aria-label="Zikorra on TikTok (opens in a new tab)">
               <svg
                 width="19"
                 height="19"
@@ -94,9 +95,9 @@ export default function Footer() {
                 fill="currentColor"
                 aria-hidden="true"
               >
-                <path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.89a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.86H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.53 2.79-1.53 2.99 0 3.58 1.97 3.58 4.53v5.25Z" />
+                <path d="M16.6 2h-3.2v13.7a3.1 3.1 0 1 1-2.7-3.1V9.3a6.4 6.4 0 1 0 6 6.4V8.8a9 9 0 0 0 5.3 1.7V7.2A5.4 5.4 0 0 1 16.6 2Z" />
               </svg>
-            </button>
+            </a>
           </div>
           <p className={styles.copyright}>
             ©2026 Zikorra services limited . All rights reserved

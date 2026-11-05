@@ -81,3 +81,7 @@ Optional `GOOGLE_SITE_VERIFICATION` accepts the public HTML verification token o
 - [Google: block indexing with noindex](https://developers.google.com/search/docs/crawling-indexing/block-indexing): crawlers need access to see noindex; robots is not access control.
 - [Google: Organization structured data](https://developers.google.com/search/docs/appearance/structured-data/organization): use accurate organization details and validate deployed markup.
 - Font source: Google's official Geist Latin variable WOFF2 distribution; license from [Vercel Geist](https://github.com/vercel/geist-font/blob/main/LICENSE.txt).
+
+## Social links follow-up
+
+The owner supplied Instagram, Facebook, TikTok and X URLs. Footer placeholders now link to these destinations; the LinkedIn placeholder was replaced by TikTok. The concatenated Facebook/TikTok input was separated, and profile tracking query parameters were removed. Instagram, TikTok and X profile URLs are also included in Organization `sameAs`. Facebook uses the supplied `/share/` link in the footer; it is omitted from `sameAs` until a stable canonical page/profile URL is supplied. Destination account ownership is owner-provided, not independently verified. Legal placeholders remain pending. This follow-up does not change or revalidate the Lighthouse scores above.
