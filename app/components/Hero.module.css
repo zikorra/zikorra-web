@@ -63,7 +63,7 @@
 .actions a:focus-visible { outline: 3px solid #0758c5; outline-offset: 4px; }
 .categories { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; padding: 0; margin: 42px 0 0; list-style: none; }
 .categories li { display: flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 999px; background: #fff; color: #171717; font-size: 14px; font-weight: 500; line-height: 20px; }
-.categories img { opacity: .55; }
+.categories img { filter: brightness(0); opacity: .55; }
 .tools { pointer-events: none; position: absolute; inset: 0; }
 .tool { position: absolute; width: 56px; height: auto; object-fit: contain; }
 .drill { top: 102px; left: 8.4%; }
