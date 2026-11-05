@@ -17,9 +17,9 @@ export default function Home() {
       <TrustFeatures />
       <ServiceCategories />
       <Testimonials />
+      <Faq />
       <AvailableProfessionals />
       <Features />
-      <Faq />
       <CtaSection />
       <Footer />
     </div>
