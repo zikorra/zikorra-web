@@ -1,0 +1,40 @@
+.section { background: #fff; padding: 80px 0 96px; font-family: var(--font-geist-sans), sans-serif; }
+.header { padding-inline: 20px; text-align: center; }
+.badge { display: inline-flex; align-items: center; gap: 8px; padding: 3px 18px 3px 3px; border-radius: 999px; background: #000; color: #fff; font-size: 13px; line-height: 24px; font-weight: 500; }
+.badge > span { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: #0c75ff; }
+.heading { margin-top: 18px; font-size: 40px; line-height: 1.2; letter-spacing: -.69px; font-weight: 600; color: #000; }
+.intro { max-width: 540px; margin: 20px auto 0; font-size: 16px; line-height: 22px; letter-spacing: -.42px; font-weight: 500; color: #a3a3a3; }
+.reviews { position: relative; isolation: isolate; margin-top: 64px; overflow: hidden; padding-block: 1px 16px; }
+.curve { position: absolute; inset: 45px 0 0; width: 100%; height: calc(100% - 45px); z-index: -1; }
+.viewport { overflow-x: auto; scrollbar-width: thin; scroll-snap-type: x mandatory; mask-image: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent); }
+.viewport + .viewport { margin-top: 20px; }
+.viewport:focus-visible { outline: 2px solid #0c75ff; outline-offset: -2px; }
+.row { display: flex; gap: 20px; width: max-content; position: relative; left: 50%; transform: translateX(-50%); padding-inline: 20px; }
+.secondRow { transform: translateX(calc(-50% + 150px)); }
+.card { display: flex; flex-direction: column; width: 400px; min-height: 264px; padding: 20px; margin: 0; background: #fcfcfc; border: 1px solid #efefef; border-radius: 14px; scroll-snap-align: center; }
+.quoteMark { height: 52px; color: #0c75ff; font-family: Georgia, serif; font-size: 68px; font-weight: 700; line-height: 1; }
+.quote { margin-top: 12px; font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: -.42px; color: #3e3e3e; }
+.author { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 24px; }
+.avatar { display: flex; justify-content: center; align-items: center; flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: #e7efff; color: #0758c5; font-size: 14px; font-weight: 600; }
+.name, .service { display: block; font-size: 16px; line-height: 22px; font-weight: 500; letter-spacing: -.42px; }
+.name { color: #000; }
+.service { color: #969696; }
+@media (max-width: 1023px) {
+  .section { padding-block: 64px; }
+  .heading { font-size: 36px; }
+  .card { width: 350px; }
+  .reviews { margin-top: 44px; }
+}
+@media (max-width: 767px) {
+  .section { padding-block: 56px; }
+  .heading { font-size: 30px; }
+  .badge { font-size: 11px; }
+  .intro { margin-top: 16px; }
+  .reviews { margin-top: 32px; }
+  .viewport { mask-image: none; }
+  .row, .secondRow { left: auto; transform: none; gap: 12px; }
+  .viewport + .viewport { margin-top: 12px; }
+  .card { width: min(82vw, 350px); min-height: 290px; }
+  .quote { font-size: 15px; line-height: 23px; }
+  .name, .service { font-size: 14px; line-height: 20px; }
+}
