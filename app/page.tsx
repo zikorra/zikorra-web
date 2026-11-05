@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
       <Hero />
+      <HowItHelps />
       <TrustFeatures />
       <AvailableProfessionals />
       <Features />
-      <HowItHelps />
       <Faq />
       <CtaSection />
       <Footer />
