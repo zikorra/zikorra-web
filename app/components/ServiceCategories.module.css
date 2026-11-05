@@ -1,0 +1,87 @@
+.section {
+  background: #fff;
+  padding: 80px 24px 96px;
+  font-family: var(--font-geist-sans), sans-serif;
+}
+.container {
+  max-width: 1240px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 100px;
+}
+.heading {
+  max-width: 540px;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -.69px;
+  color: #000;
+}
+.description {
+  max-width: 540px;
+  margin-top: 28px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -.42px;
+  color: #a3a3a3;
+}
+.services {
+  margin: 0;
+  padding: 20px 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  mask-image: linear-gradient(to bottom, transparent, #000 23%, #000 77%, transparent);
+}
+.service {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -.69px;
+  color: #000;
+}
+.service:first-child, .service:last-child { padding-left: 24px; }
+.service:nth-child(2), .service:nth-child(4) { padding-left: 8px; }
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  color: #fff;
+}
+.icon svg { width: 27px; height: 27px; }
+.painting { background: #294db5; }
+.electrical { background: #f44950; }
+.plumbing { background: #0c75ff; }
+.cleaning { background: #f7a30c; }
+.carpentry { background: #40cfae; }
+@media (max-width: 1023px) {
+  .section { padding-block: 64px; }
+  .container { gap: 40px; }
+  .heading { font-size: 38px; }
+  .description { margin-top: 22px; }
+  .service { font-size: 24px; gap: 12px; }
+  .icon { width: 50px; height: 50px; }
+  .services { gap: 26px; }
+}
+@media (max-width: 767px) {
+  .section { padding: 56px 20px; }
+  .container { grid-template-columns: 1fr; gap: 28px; }
+  .heading { font-size: 32px; max-width: 440px; }
+  .description { margin-top: 20px; }
+  .services { width: 100%; max-width: 440px; margin-inline: auto; gap: 22px; }
+  .service { font-size: clamp(22px, 5.5vw, 28px); }
+  .icon { width: 48px; height: 48px; }
+  .icon svg { width: 24px; height: 24px; }
+}
