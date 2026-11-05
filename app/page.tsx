@@ -7,6 +7,7 @@ import AvailableProfessionals from "./components/AvailableProfessionals";
 import HowItHelps from "./components/HowItHelps";
 import Faq from "./components/Faq";
 import HowItWorks from "./components/HowItWorks";
+import FindHelp from "./components/FindHelp";
 import CtaSection from "./components/CtaSection";
 import Footer from "./components/Footer";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Testimonials />
       <Faq />
       <HowItWorks />
+      <FindHelp />
       <AvailableProfessionals />
       <Features />
       <CtaSection />
