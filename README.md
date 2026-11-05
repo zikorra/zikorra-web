@@ -27,30 +27,31 @@ npm run lint    # eslint
 - **React 19**
 - **Tailwind CSS v4** — theme tokens (brand color, fonts) are defined in `app/globals.css` via `@theme inline`, not a `tailwind.config.js`.
 - **lucide-react** for icons that aren't custom brand assets.
-- **next/font** — Geist is the site-wide default (loaded in `app/layout.tsx`); Manrope is loaded separately in a couple of components where the design calls for it specifically.
+- **next/font** — Geist is the site-wide default (loaded in `app/layout.tsx`); Geist Mono is also configured for monospace text.
 
 ## Project structure
 
 ```
 app/
-  layout.tsx           Root layout, fonts, metadata
-  page.tsx              Assembles the page from section components
-  globals.css           Tailwind import + theme tokens (brand color, fonts)
+  layout.tsx             Root layout, fonts, metadata, analytics
+  page.tsx               Assembles the redesigned sections in display order
+  globals.css            Tailwind import and theme tokens
   components/
-    Hero.tsx             Hero heading, badge, waitlist form
-    ServiceStrip.tsx      Full-bleed photo strip + "Service Flow" card
-    Features.tsx          Three-column feature highlights
-    HowItHelps.tsx         Artisan/customer card exports + copy
-    Faq.tsx                 Accordion FAQ (client component)
-    CtaSection.tsx           Bottom waitlist CTA + contact info card
-    Footer.tsx                Oversized wordmark footer
-    WaitlistForm.tsx           Shared email capture form (used in Hero + CTA)
-    PlaceholderImage.tsx        Thin wrapper around next/image (fixed aspect box, cover/contain)
+    Hero.tsx             Hero copy, floating tools, categories, photo strip
+    HeroNav.tsx          Site header and navigation
+    HowItHelps.tsx       Customer and artisan app cards
+    TrustFeatures.tsx    Verification, booking, and payment highlights
+    ServiceCategories.tsx  Coloured service list
+    Testimonials.tsx     Customer review cards
+    Faq.tsx              Animated FAQ accordion
+    HowItWorks.tsx       Experience accordion and illustration
+    FindHelp.tsx         Service pills and customer app link
+    ContactSection.tsx   Patterned contact banner
+    Footer.tsx           Footer navigation and waitlist dialog
+    WaitlistForm.tsx     Email/phone capture form
 public/
-  icons/                 Small UI icons (badge icon, mail icon)
-  images/
-    hero/                 hero-strip-1..4 — the ServiceStrip photo row
-    how-it-helps/          artisan-card / customer-card — full Figma exports
+  icons/                 Brand, category, and trust icons
+  images/                Hero, app mockups, experience, and contact artwork
 ```
 
 ## Adding/replacing images
@@ -64,5 +65,7 @@ A couple of format notes learned the hard way:
 
 ## Notes
 
-- The waitlist form is presentational only — it doesn't call an API yet. Submitting shows a local "you're on the list" confirmation.
-- The page is a single scrolling document (`app/page.tsx`); there's no header/nav section yet, matching the current design.
+- App download links open the waitlist dialog until store URLs are available.
+- The waitlist form submits email or phone details to the configured service and handles success and failure states.
+- The page is a single scrolling document (`app/page.tsx`), with the header preserved in `HeroNav.tsx`.
+- Social and legal footer items are placeholders until their destination URLs are supplied.
