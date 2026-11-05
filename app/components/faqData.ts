@@ -180,7 +180,10 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Do you guarantee the quality of work?",
         blocks: [
-          { type: "p", text: "We work hard to maintain high service standards." },
+          {
+            type: "p",
+            text: "We work hard to maintain high service standards.",
+          },
           {
             type: "p",
             text: "Every completed job is reviewed by customers, and artisans are continuously rated on:",
@@ -253,7 +256,8 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
         ],
       },
       {
-        question: "Can artisans work outside the Zikorra platform after meeting me?",
+        question:
+          "Can artisans work outside the Zikorra platform after meeting me?",
         blocks: [
           {
             type: "p",
@@ -282,7 +286,10 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Why should I trust Zikorra?",
         blocks: [
-          { type: "p", text: "Because trust is at the heart of everything we do." },
+          {
+            type: "p",
+            text: "Because trust is at the heart of everything we do.",
+          },
           { type: "p", text: "Our platform combines:" },
           {
             type: "ul",
@@ -327,7 +334,10 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
               "Emergency response",
             ],
           },
-          { type: "p", text: "You stay informed wherever you are in the world." },
+          {
+            type: "p",
+            text: "You stay informed wherever you are in the world.",
+          },
         ],
       },
       {
@@ -349,7 +359,10 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
               "Budget monitoring",
             ],
           },
-          { type: "p", text: "Ideal for Nigerians living outside the country." },
+          {
+            type: "p",
+            text: "Ideal for Nigerians living outside the country.",
+          },
         ],
       },
     ],
@@ -375,7 +388,10 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
               "Construction companies",
             ],
           },
-          { type: "p", text: "Enterprise maintenance plans are also available." },
+          {
+            type: "p",
+            text: "Enterprise maintenance plans are also available.",
+          },
         ],
       },
     ],
@@ -386,7 +402,10 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "I am an artisan. How can I join Zikorra?",
         blocks: [
-          { type: "p", text: "You can apply through our website or mobile app." },
+          {
+            type: "p",
+            text: "You can apply through our website or mobile app.",
+          },
           { type: "p", text: "Applicants complete:" },
           {
             type: "ul",

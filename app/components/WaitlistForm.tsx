@@ -126,7 +126,9 @@ export default function WaitlistForm({
             {iconEl}
             {input}
           </div>
-          {submitButton("px-6 py-3.5 text-sm sm:rounded-none sm:py-4 sm:text-base")}
+          {submitButton(
+            "px-6 py-3.5 text-sm sm:rounded-none sm:py-4 sm:text-base",
+          )}
         </form>
       )}
       {error && (

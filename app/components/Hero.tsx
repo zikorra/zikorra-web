@@ -8,9 +8,15 @@ const QUICK_CATEGORIES = ["Plumber", "Electrician", "Cleaner", "Carpenter"].map(
 );
 
 const PHOTOS = [
-  { name: "electrical-repair", alt: "Zikorra professional repairing a wall socket" },
+  {
+    name: "electrical-repair",
+    alt: "Zikorra professional repairing a wall socket",
+  },
   { name: "painter", alt: "Zikorra painter painting an interior wall" },
-  { name: "electrician", alt: "Zikorra electrician checking an electrical panel" },
+  {
+    name: "electrician",
+    alt: "Zikorra electrician checking an electrical panel",
+  },
   { name: "plumber", alt: "Zikorra plumber repairing pipes beneath a sink" },
   { name: "cleaner", alt: "Zikorra cleaner cleaning a kitchen" },
 ];
@@ -39,21 +45,31 @@ export default function Hero() {
             <span>Nigeria’s Managed Home &amp; Property Service Platform</span>
           </div>
           <h1 className={styles.heading}>
-            Find plumbers, electricians,<br className={styles.desktopBreak} />{" "}
-            cleaners <span className={styles.highlight}>and more.</span>
+            Find plumbers, electricians,
+            <br className={styles.desktopBreak} /> cleaners{" "}
+            <span className={styles.highlight}>and more.</span>
           </h1>
           <p className={styles.description}>
             Find verified professionals for your home, agree on the price before
             paying, and stay updated on every job from start to finish.
           </p>
           <div className={styles.actions}>
-            <a href="#waitlist" className={styles.primary}>Download Customer app</a>
-            <a href="#waitlist" className={styles.secondary}>Download Artisan App</a>
+            <a href="#waitlist" className={styles.primary}>
+              Download Customer app
+            </a>
+            <a href="#waitlist" className={styles.secondary}>
+              Download Artisan App
+            </a>
           </div>
           <ul className={styles.categories} aria-label="Home services">
             {QUICK_CATEGORIES.map(({ icon, label }) => (
               <li key={label}>
-                <Image src={`/icons/categories/${icon}.svg`} alt="" width={20} height={20} />
+                <Image
+                  src={`/icons/categories/${icon}.svg`}
+                  alt=""
+                  width={20}
+                  height={20}
+                />
                 {label}
               </li>
             ))}

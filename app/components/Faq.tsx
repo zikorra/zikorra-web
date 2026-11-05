@@ -25,7 +25,9 @@ export default function Faq() {
       <div className={styles.container}>
         <div className={styles.sidebar}>
           <h2 id="faq-heading" className={styles.heading}>
-            Have questions?<br />Find answers
+            Have questions?
+            <br />
+            Find answers
           </h2>
           <div className={styles.support}>
             <p>Still have questions? Our support team is here to help.</p>
@@ -38,7 +40,11 @@ export default function Faq() {
           {visibleFaqs.map((item, index) => {
             const isOpen = openIndex === index;
             return (
-              <div key={item.question} className={styles.item} data-open={isOpen}>
+              <div
+                key={item.question}
+                className={styles.item}
+                data-open={isOpen}
+              >
                 <h3>
                   <button
                     id={`faq-question-${index}`}
@@ -50,8 +56,16 @@ export default function Faq() {
                   >
                     <span>{item.question}</span>
                     <span className={styles.toggleIcon} aria-hidden="true">
-                      <Plus className={styles.plus} size={22} strokeWidth={1.5} />
-                      <Minus className={styles.minus} size={22} strokeWidth={1.5} />
+                      <Plus
+                        className={styles.plus}
+                        size={22}
+                        strokeWidth={1.5}
+                      />
+                      <Minus
+                        className={styles.minus}
+                        size={22}
+                        strokeWidth={1.5}
+                      />
                     </span>
                   </button>
                 </h3>
@@ -64,22 +78,29 @@ export default function Faq() {
                 >
                   <div className={styles.answerClip}>
                     <div className={styles.answer}>
-                  {item.blocks.map((block, blockIndex) =>
-                    block.type === "p" ? (
-                      <p key={blockIndex}>{block.text}</p>
-                    ) : (
-                      <ul key={blockIndex}>
-                        {block.items.map((text) => <li key={text}>{text}</li>)}
-                      </ul>
-                    ),
-                  )}
+                      {item.blocks.map((block, blockIndex) =>
+                        block.type === "p" ? (
+                          <p key={blockIndex}>{block.text}</p>
+                        ) : (
+                          <ul key={blockIndex}>
+                            {block.items.map((text) => (
+                              <li key={text}>{text}</li>
+                            ))}
+                          </ul>
+                        ),
+                      )}
                     </div>
                   </div>
                 </div>
               </div>
             );
           })}
-          <button type="button" className={styles.more} onClick={toggleMore} aria-expanded={showAll}>
+          <button
+            type="button"
+            className={styles.more}
+            onClick={toggleMore}
+            aria-expanded={showAll}
+          >
             {showAll ? "View less" : "More questions"}
           </button>
         </div>

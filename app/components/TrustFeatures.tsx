@@ -30,8 +30,8 @@ export default function TrustFeatures() {
       <div className={styles.container}>
         <h2 id="trust-heading" className={styles.heading}>
           Find trusted professionals, book with confidence,
-          <br className={styles.desktopBreak} />{" "}
-          and stay informed every step of the way.
+          <br className={styles.desktopBreak} /> and stay informed every step of
+          the way.
         </h2>
 
         <div className={styles.features}>
@@ -45,12 +45,8 @@ export default function TrustFeatures() {
                 sizes="(max-width: 767px) 61px, 66px"
                 className={styles.icon}
               />
-              <h3 className={styles.title}>
-                {title}
-              </h3>
-              <p className={styles.description}>
-                {description}
-              </p>
+              <h3 className={styles.title}>{title}</h3>
+              <p className={styles.description}>{description}</p>
             </div>
           ))}
         </div>

@@ -16,8 +16,8 @@ export default function CtaSection() {
           Be among the first to use Zikorra.
         </h2>
         <p className="mx-auto mt-3 max-w-[372px] text-base leading-[22px] font-medium text-white">
-          Join the waitlist for launch updates, early access, and
-          availability in your city.
+          Join the waitlist for launch updates, early access, and availability
+          in your city.
         </p>
 
         <WaitlistForm className="mt-8" formBg="bg-[#F8FAFC]" centered />

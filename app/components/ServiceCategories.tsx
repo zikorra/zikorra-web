@@ -22,7 +22,10 @@ export default function ServiceCategories() {
             verified professionals for the work your home needs all on Zikorra.
           </p>
         </div>
-        <ul className={styles.services} aria-label="Services available on Zikorra">
+        <ul
+          className={styles.services}
+          aria-label="Services available on Zikorra"
+        >
           {SERVICES.map(({ label, icon: Icon, color }) => (
             <li key={label} className={styles.service}>
               <span className={`${styles.icon} ${styles[color]}`}>

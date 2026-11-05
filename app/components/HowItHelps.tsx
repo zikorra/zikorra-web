@@ -32,8 +32,8 @@ export default function HowItHelps() {
     <section className={styles.section} aria-labelledby="apps-heading">
       <div className={styles.container}>
         <h2 id="apps-heading" className={styles.heading}>
-          Whether you need help or offer<br className={styles.desktopBreak} />{" "}
-          it, Zikorra is for you.
+          Whether you need help or offer
+          <br className={styles.desktopBreak} /> it, Zikorra is for you.
         </h2>
         <p className={styles.intro}>
           Two apps, one platform. Find trusted professionals for your home or
@@ -46,15 +46,25 @@ export default function HowItHelps() {
                 <p className={styles.audience}>{app.audience}</p>
                 <h3 className={styles.title}>{app.title}</h3>
                 <p className={styles.description}>{app.description}</p>
-                <a href="#waitlist" className={`${styles.download} ${styles[app.variant]}`}>
+                <a
+                  href="#waitlist"
+                  className={`${styles.download} ${styles[app.variant]}`}
+                >
                   {app.action}
-                  <span className={styles.arrow}><ArrowRight size={15} strokeWidth={3} aria-hidden="true" /></span>
+                  <span className={styles.arrow}>
+                    <ArrowRight size={15} strokeWidth={3} aria-hidden="true" />
+                  </span>
                 </a>
               </div>
               <div className={styles.preview}>
-                <Image src={app.image} alt={app.alt} width={app.width} height={479}
+                <Image
+                  src={app.image}
+                  alt={app.alt}
+                  width={app.width}
+                  height={479}
                   sizes="(min-width: 1280px) 600px, (min-width: 768px) 46vw, 90vw"
-                  className={styles.previewImage} />
+                  className={styles.previewImage}
+                />
               </div>
             </article>
           ))}

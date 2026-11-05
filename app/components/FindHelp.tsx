@@ -1,4 +1,15 @@
-import { ArrowRight, BrushCleaning, Cctv, Droplet, Flame, Hammer, PaintRoller, SearchCheck, Shirt, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  BrushCleaning,
+  Cctv,
+  Droplet,
+  Flame,
+  Hammer,
+  PaintRoller,
+  SearchCheck,
+  Shirt,
+  Zap,
+} from "lucide-react";
 import styles from "./FindHelp.module.css";
 
 const SERVICES = [
@@ -17,16 +28,19 @@ export default function FindHelp() {
     <section className={styles.section} aria-labelledby="find-help-heading">
       <div className={styles.container}>
         <div className={styles.badge}>
-          <span><SearchCheck size={17} aria-hidden="true" /></span>
+          <span>
+            <SearchCheck size={17} aria-hidden="true" />
+          </span>
           FIND THE HELP YOU NEED
         </div>
         <h2 id="find-help-heading" className={styles.heading}>
-          The right help for your home<br className={styles.desktopBreak} />{" "}
-          is one app away.
+          The right help for your home
+          <br className={styles.desktopBreak} /> is one app away.
         </h2>
         <p className={styles.description}>
-          From repairs and cleaning to everyday maintenance, connect with verified
-          professionals, agree on a price and manage every step with Zikorra.
+          From repairs and cleaning to everyday maintenance, connect with
+          verified professionals, agree on a price and manage every step with
+          Zikorra.
         </p>
         <ul className={styles.services} aria-label="Available home services">
           {SERVICES.map(({ label, icon: Icon }) => (
@@ -38,7 +52,9 @@ export default function FindHelp() {
         </ul>
         <a href="#waitlist" className={styles.download}>
           <span>Download Customer App</span>
-          <span className={styles.arrow}><ArrowRight size={18} strokeWidth={3} aria-hidden="true" /></span>
+          <span className={styles.arrow}>
+            <ArrowRight size={18} strokeWidth={3} aria-hidden="true" />
+          </span>
         </a>
       </div>
     </section>
