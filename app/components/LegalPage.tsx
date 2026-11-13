@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ChevronLeft } from "lucide-react";
 import styles from "./LegalPage.module.css";
 
 type Props = {
@@ -29,7 +30,10 @@ export default function LegalPage({ title, sections, children }: Props) {
             className="h-4 w-auto object-contain sm:h-[18px]"
           />
         </Link>
-        <Link href="/">← Back to home</Link>
+        <Link href="/" className={styles.backLink}>
+          <ChevronLeft size={18} strokeWidth={2} aria-hidden="true" />
+          <span>Back to home</span>
+        </Link>
       </header>
       <main id="main-content" className={styles.main}>
         <p className={styles.eyebrow}>Zikorra Legal</p>
