@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./LegalPage.module.css";
 
 type Props = {
@@ -12,7 +13,22 @@ export default function LegalPage({ title, sections, children }: Props) {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <Link href="/" aria-label="Zikorra home" className={styles.brand}>Zikorra</Link>
+        <Link href="/" aria-label="Zikorra home" className={styles.brand}>
+          <Image
+            src="/icon.png"
+            alt=""
+            width={36}
+            height={36}
+            className="h-7 w-7 shrink-0 object-contain sm:h-8 sm:w-8"
+          />
+          <Image
+            src="/icons/zikorra-wordmark.png"
+            alt="Zikorra"
+            width={1440}
+            height={287}
+            className="h-4 w-auto object-contain sm:h-[18px]"
+          />
+        </Link>
         <Link href="/">← Back to home</Link>
       </header>
       <main id="main-content" className={styles.main}>
