@@ -117,8 +117,8 @@ export default function Footer() {
             </div>
             <div>
               <h3>Legal</h3>
-              <button type="button">Privacy Policy</button>
-              <button type="button">Terms of Service</button>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+              <Link href="/terms-of-service">Terms of Service</Link>
             </div>
           </div>
           <div className={styles.stores}>

@@ -64,28 +64,14 @@
 .categories { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; padding: 0; margin: 42px 0 0; list-style: none; }
 .categories li { display: flex; align-items: center; gap: 6px; padding: 8px 12px; border-radius: 999px; background: #fff; color: #171717; font-size: 14px; font-weight: 500; line-height: 20px; }
 .categories img { filter: brightness(0); opacity: .55; }
-.tools { pointer-events: none; position: absolute; inset: 0; }
-.tool { position: absolute; width: 56px; height: auto; object-fit: contain; }
-.drill { top: 102px; left: 8.4%; }
-.broom { top: 106px; right: 12.7%; }
-.pipe { bottom: 115px; left: 18%; }
-.hammer { bottom: 105px; right: 18%; }
 .gallery { overflow-x: auto; scrollbar-width: thin; scroll-snap-type: none; scroll-padding-inline: 20px; }
 .gallery:focus-visible { outline: 2px solid #0c75ff; outline-offset: -2px; }
 .photoStrip { display: flex; gap: 10px; width: max-content; padding-inline: 20px; }
 .photo { position: relative; flex-shrink: 0; width: 27.3vw; max-width: 520px; aspect-ratio: 1.07; overflow: hidden; border-radius: 22px; background: #e6e4e0; scroll-snap-align: start; }
 .video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .photoImage { object-fit: cover; }
-@media (min-width: 1600px) {
-  .tool { width: 64px; }
-}
 @media (max-width: 1023px) {
   .intro { padding-top: 70px; }
-  .tool { width: 52px; }
-  .drill { left: 3%; top: 32px; }
-  .broom { right: 3%; top: 32px; }
-  .pipe { left: 5%; bottom: 115px; }
-  .hammer { right: 5%; bottom: 110px; }
   .heading { font-size: 46px; max-width: 700px; }
   .description { max-width: 560px; }
   .photo { width: 42vw; }
@@ -102,10 +88,6 @@
   .actions a { min-height: 50px; border-radius: 15px; }
   .categories { gap: 8px; margin-top: 26px; max-width: 340px; margin-inline: auto; }
   .categories li { padding: 8px 10px; }
-  .tool { width: 40px; }
-  .drill { top: 15px; left: 6%; }
-  .broom { top: 14px; right: 7%; }
-  .pipe, .hammer { display: none; }
   .gallery { overflow-x: auto; scrollbar-width: thin; scroll-snap-type: none; }
   .photoStrip { left: auto; transform: none; padding-inline: 20px; gap: 12px; }
   .photo { width: 72vw; aspect-ratio: 4 / 5; border-radius: 20px; scroll-snap-align: center; }

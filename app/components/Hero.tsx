@@ -29,19 +29,6 @@ export default function Hero() {
     <section className={styles.hero}>
       <HeroNav />
       <div className={styles.intro}>
-        <div className={styles.tools} aria-hidden="true">
-          {["drill", "broom", "pipe", "hammer"].map((tool) => (
-            <Image
-              key={tool}
-              src={`/images/hero/hero-${tool}.png`}
-              alt=""
-              width={168}
-              height={174}
-              className={`${styles.tool} ${styles[tool]}`}
-              sizes="(max-width: 639px) 40px, (max-width: 1023px) 52px, 64px"
-            />
-          ))}
-        </div>
         <div className={styles.content}>
           <div className={styles.badge}>
             <Image src="/icons/badge-icon.png" alt="" width={20} height={22} />
